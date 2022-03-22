@@ -1,0 +1,128 @@
+
+
+
+   *{
+   box-sizing:border-box;
+    }
+body {
+      font-size: 12px;
+      color: white;
+      padding:0;
+      margin:0;
+    }
+h4, h1, h3, p{
+    width: 100%;
+}             
+      
+      
+      /* side nav left */
+  
+  .sidenav{
+          height: 100%;
+          width: 0;
+          position:fixed; 
+          z-index: 1;
+          top: 0px;
+          left: 0;
+          background-color: rgb(26, 23, 23);
+          overflow-x:hidden;
+          transition:0.5s;
+          padding-top: 60px;}
+      .sidenav a {
+                  padding: 8px 8px 8px 32px;
+                  text-decoration:none; 
+                  font-size: 20px;
+                  color: #818181;
+                  display:block;
+                  transition: 0.3s;}
+          .sidenav a:hover{
+                           color: #f1f1f1; }
+               .sidenav .closebtn {
+                                  position:absolute; 
+                                  top: 0;
+                                  right: 25px;
+                                  font-size: 36px;
+                                  margin-left: 50px;}
+                   #pageNav{
+                            position:fixed;
+                            top: 50px; 
+                            left: 10px;
+                            color: lightgrey;}
+                                  
+                  @media screen and (max-height: 450px){
+                           .sidenavl {padding-top: 15px; }
+                           .sidenavl a{font-size: 18px; }}
+                          
+                           
+    
+      /*content*/
+ .containerMain{
+            background-image:url('images/5.jpg');
+            background-size: 100%;
+            display: flex;
+            padding: 50px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 100px; }
+             
+             
+            .container{ 
+                display: flex;
+                flex-wrap: wrap;
+                height: auto;
+                width: 85%;
+                background-color: #ffffff10;
+                backdrop-filter: blur(12px);
+                -webkit-backdrop-filter: blur(12px);
+                border-radius: 20px;
+                padding:50px; 
+                margin: 40px auto;}
+        
+        .cBox{
+                width: 100%;
+                border: 1px solid black;
+                
+        }
+                        .c1{
+                            font-size: 10px;
+                            border: 1px solid black;
+                            width: 100%;
+                            margin: 10px auto;
+                            }
+      
+                                    .singleCode{
+                                                margin: 3px;
+                                                color: white;
+                                                background: #4c3f33;
+                                                border: 1px solid #7a6651;
+                                                border-radius: 3px;
+                                                }
+       
+   /* javascript section 1 */  
+          #dem1{
+                 height: 200px;
+                 color: white;
+                 border: 1px solid black;
+                 line-height: 200px;
+                 text-align:center; 
+            }
+        
+                                    .tBox{
+                                    width: 100%;
+                                    }
+              
+                                                table, th, td {
+                                                font-size: 15px;
+                                                padding: 2px 10px;
+                                                border: 1px solid black;
+                                                border-collapse:collapse;
+                                                text-align: center;
+                                                }
+        
+        
+        
+        
+/* javascript section 2 */
+        
+            
+      

@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 14 Feb 2022 23:43:01 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<link href="prism.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="javascript.css"/>
+	
+    <title>Javascript section 2</title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <header>
+	  
+
+	      <span id="pageNav" style="font-size: 30px; cursor:pointer" onclick="openNav()" ;>&#9776;</span>
+				 
+	 <div id="mySidenav" class="sidenav" onmouseleave="closeNav()">
+	 	   <!--<a href="javascript:void(0)" class="closebtn"
+		    onclick="closeNav()">&times;</a>-->
+		     <a href="index.html"> Home </a>
+		       <a href="sign-up.html"> Sign up </a>
+		        <a href="log-in.html"> Log in </a>
+		         <a href="contact-us.html"> Contact us </a>
+		          <a href="HTML.html"> Html section </a>
+		        <a href="css.html"> Css3 section </a>
+		            <a href="javascript.html"> Javascript section</a>
+		             <a href="javascript.html#intro">Intro </a>
+		              <a href="javascript.html#codePlace"> Code Placement </a>
+					   <a href="javascript.html#displayOutput"> Display Output</a>
+		           <a href="javascript.html#state"> Statements </a>
+		            <a href="javascript.html#varDecleration"> Variable Decleration </a>
+		             <a href="part7.html"> Part 7 </a>
+		              <a href="part8.html"> Part 8 </a>
+					   <a href="part4.html"> Part 4 </a>
+		           <a href="part5.html"> Part 5 </a>
+		            <a href="part6.html"> Part 6 </a>
+		             <a href="part7.html"> Part 7 </a>
+		              <a href="part8.html"> Part 8 </a>
+		              </div>
+					
+					  </header>
+					
+					  
+					  
+					  	
+	<!--Content-->
+<div class="containerMain">
+
+
+<div class="container"><!--box 1 starts-->
+          <h1>Events</h1>
+		  <p>Events are actions that happen in the system you are using, The system fires a signal for each event,
+			  so we can do something when it happens.</p>
+			
+		  <div class="cBox">
+			<pre class="c1"><code class="language-js">
+
+			//Html code
+					&ltbutton id="demo"&gtClick Me&lt/button&gt;
+
+			// javascript code
+					let btn = document.getElementById("demo");
+
+			// This it the event handler
+					btn.onclick = function(){
+					alert("The button was clicked.");
+					};
+			</code></pre>
+			 <button id="demo1">Click Me</button>
+	</div>
+
+			<h4>Inline Event Handlers</h4>
+			<p>The <code>event handler</code> is the block of code that is executed when an event is fired. it is also known as an 
+			<code>event listener</code>.<br>
+			We can write <code>event handlers</code> straight in the HTML element using <strong>event handler attributes.</strong></p>
+		<div class="cBox">
+				<pre class="c1"><code class="language-js">
+				  //Html code
+					  &ltbutton onclick='alert("The button was pushed");'&gtClick Me&lt/button&gt
+				</code></pre>
+				<button onclick='alert("The button was pushed");'>Click Me</button>
+				</div>
+
+				<p>This one calls <code>myFunc</code> at the press of a button.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+					 
+		//HTML code
+		&ltbutton onclick="myFunc()"&gtClick Me&lt/button&gt
+
+		// javascript code
+		function myFunc(){
+					alert("Hello World");
+		}
+		</code></pre>
+		<p id="demo2"></p>
+		<button onclick="myFunc1()">Click Me</button>
+	</div>
+			<h4><code>addEventListener()</code> Method</h4>
+			<p>The <code>addEventListener</code> method contains a function that will be called when an event happens.<br>
+			<strong>Syntax:</strong><br></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		element.addEventListener(eventType, listenerFunction)		
+		</code></pre>
+	</div>
+		<ul>
+				<li><code>event type</code>- A string representing an event.</li>
+				<li><code>listenerFunction</code>- A listener function, will be called by event.</li>
+			</ul>	
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+         //HTML code
+		&ltbutton id="btn"&gtClick me&lt/button&gt	
+		
+		//javascript code
+		var btn = document.getElementById("btn");
+
+		btn.addEventListener("click", function(){
+			alert("And another alert");
+		});
+		</code></pre>
+		<button id="but1">Click me</button>
+	</div>
+
+			<h4>change Event</h4>
+			<p>The <code>change</code> event fires when the value of an input element changes, usually: <code> &ltinput&gt, &ltselect&gt,
+			</code> and  <code> &lttextarea&gt</code> elements. When you select a car from the drop down, your choice will show below.</p>
+			<select id="mySelect" name="mySelect">
+				<option value="Audi">Audio </option>
+				<option value="BMW">BMW </option>
+				<option value="Mercedes">Mercedes </option>
+				<option value="Ford">Ford</option>
+			</select>
+			<p id="demo4"></p>
+
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+			 //HTML code
+			 &ltp&gtSelect a car from the list.&LT/p&gt
+	
+			 &ltselect id="mySelect" name="mySelect"&gt
+			   &ltoption value="Audio"&gtAudi &lt/option&gt
+			   &ltoption value="BMW"&gtBMW &lt/option&gt
+			   &ltoption value="Mercedes"&gtMercedes &lt/option&gt
+			   &ltoption value="Ford"&gtFord&lt/option&gt
+			 &lt/select&gt
+		 
+
+		    &ltp id="demo"&gt&lt/p&gt
+			
+			//javascript code
+			document.getElementById("mySelect").addEventListener("change",myFunc);
+	
+			function myFunc(){
+			let val = document.getElementById("mySelect").value;
+			document.getElementById("demo").innerHTML = 'You Selected: ' +  val;
+			}
+		</code></pre>
+	</div>
+			<h4><code>mouseover</code> Event</h4>
+			<p>The <code>mouseover</code> Event will fire at an element when a mouse moves onto element.</p>
+			<p id="demo5">When you move your mouse over this element it will change.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+					 //HTML code
+					 &ltp id="demo"&gtWhen you move your mouse over this element it will change.&LT/p&gt
+					
+					//javascript code
+					let elem = document.getElementById("demo");
+					 
+					elem.addEventListener("mouseover", function() {
+						elem.innerHTML = "Hello World!";
+					});
+		</code></pre>
+	</div>
+			<h4><code>focus</code> Event</h4>
+			<p>The <code>focus</code> Event fires when an element is focused, Click on the textarea below to see results.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+				//HTML code
+				&lttextarea id="area"&gtType your Message here...&lt/textarea&gt
+							
+				//javascript code
+				let area = document.getElementById("area");
+
+				area.addEventListener("focus", function(){
+					area.style.background = "red";
+				});
+		</code></pre>
+				<textarea id="area">Type your Message here...</textarea>
+	</div>
+				<h4> <code>blur</code> Event</h4>
+				<p>The <code>blur</code> Event fires when an element has lost focus, When used with the <code>focus</code> event it
+				can be used to return element to original form,<br>
+				The textarea below  will turn red when focused, and return to white when unfocused.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+				//HTML code
+				&lttextarea id="area"&gtType your Message here...&lt/textarea&gt
+										
+				//javascript code
+				let area = document.getElementById("area");
+			
+				area.addEventListener("focus", function(){
+					area.style.background = "red";
+				});
+				area.addEventListener("blur", function(){
+					area.style.background = "white";
+				});
+		</code></pre>
+				<textarea id="area1">Type your Message here...</textarea>
+	</div>
+				<h4> <code>resize</code> Event</h4>
+				<p>The <code>resize</code> Event will fire when the browser window is resized, Here we have used the <code>inner.width</code>
+				and <code>inner.height</code> to  show the effect in the paragraphs below.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+			//HTML code
+			&ltp&gt Window Width: &ltspan id="windowWidth"&gt&lt/span&gt &lt/p&gt
+			&ltp&gt Window Height: &ltspan id="windowHeight"&gt &lt/span&gt &lt/p&gt;
+			&ltp&gt Resize your browser window to see the effect.&lt/p&gt
+							
+			//javascript code
+			window.addEventListener("resize", function() {
+			document.getElementById("windowWidth").innerHTML = window.innerWidth;
+			document.getElementById("windowHeight").innerHTML = window.innerHeight;
+			});
+		</code></pre>
+				<p> Window Width: <span id="windowWidth"> </span> </p>
+				<p> Window Height: <span id="windowHeight"> </span> </p>
+				<p> Resize your browser window to see the effect.</p>
+	</div>
+
+</div><!--box 1 ends-->
+
+
+
+	
+
+<div class="container"><!--box 2 starts-->
+				<h1> The Maths Object</h1>
+				<p>Using the built in properties and methods in  the <code>math</code> object, we can perforn mathimatical tasks.<br>
+					<h4>The <code> ceil() </code> method</h4>
+					The  <code> math.ceil() </code> rounds up a given number to the nearest whole number or integer.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let cei1 = Math.ceil(.72);  //returns 1
+			let cei2 = Math.ceil(4.48);  //returns 5
+			let cei3 = Math.ceil(32.45); //returns 33
+			
+			document.getElementById("demo").innerHTML =
+			cei1 + "&ltbr&gt" +
+			cei2 + "&ltbr&gt" +
+			cei3;			
+		</code></pre>
+	</div>
+
+					<h4>The <code> floor()</code> method</h4>
+					The <code> math.floor()</code> rounds down a given number to the nearest whole number or integer.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let flo1 = Math.floor(.72);  //returns 0
+			let flo2 = Math.floor(4.48);  //returns 4
+			let flo3 = Math.floor(32.45); //returns 32
+
+			document.getElementById("demo").innerHTML =
+			flo1 + "&ltbr&gt" +
+			flo2 + "&ltbr&gt" +
+			flo3;			
+		</code></pre>
+	</div>
+					<h4>The <code> round()</code> method</h4>
+					The <code> math.round()</code> rounds a given number to the nearest whole number or integer.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let rou1 = Math.round(.72);  //returns 1
+			let rou2 = Math.round(4.48);  //returns 4
+			let rou3 = Math.round(32.45); //returns 32
+			let rou4 = Math.round(-7.34); //returns -7
+
+			document.getElementById("demo").innerHTML =
+			rou1 + "&ltbr&gt" +
+			rou2 + "&ltbr&gt" +
+			rou3 + "&ltbr&gt" +
+			rou4;			
+		</code></pre>
+	</div>
+					<h4>The <code> sqrt()</code> method</h4>
+					The <code> math.sqrt()</code> returns the square root of  a given number. will return <code> NaN</code> if given a 
+					negative number.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let squ1 = Math.sqrt(16);  //returns 4
+			let squ2 = Math.sqrt(400);  //returns 20
+			let squ3 = Math.sqrt(8.95); //returns 2.9916550603303182
+			let squ4 = Math.sqrt(-7); //returns NaN
+
+			document.getElementById("demo").innerHTML =
+			squ1 + "&ltbr&gt" +
+			squ2 + "&ltbr&gt" +
+			squ3 + "&ltbr&gt" +
+			squ4;			
+		</code></pre>
+	</div>
+					<h4>The <code> cbrt()</code> method</h4>
+					The <code> math.cbrt()</code> returns the cube root of  a given number.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+				let qub1 = Math.cbrt(16);  //returns 2.5198420997897464
+				let qub2 = Math.cbrt(400);  //returns 	7.368062997280774
+				let qub3 = Math.cbrt(8.95); //returns 2.0762246605273567
+				let qub4 = Math.cbrt(-7); //returns -1.9129311827723892
+
+				document.getElementById("demo").innerHTML =
+				qub1 + "&ltbr&gt" +
+				qub2 + "&ltbr&gt" +
+				qub3 + "&ltbr&gt" +
+				qub4;			
+		</code></pre>
+	</div>
+
+					<h4>The <code> abs()</code> method</h4>
+					The <code> math.abs()</code> returns the <strong>absolute</strong> value of  a given number.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let abv1 = Math.abs(9);  //returns 9
+			let abv2 = Math.abs(-9);  //returns 9
+			let abv3 = Math.abs(1.51); //returns 1.51
+			let abv4 = Math.abs(-1.51); //returns 1.51
+
+			document.getElementById("demo").innerHTML =
+			abv1 + "&ltbr&gt" +
+			abv2 + "&ltbr&gt" +
+			abv3 + "&ltbr&gt" +
+			abv4;			
+		</code></pre>
+	</div>
+	
+					<h4>The <code> max()</code> method</h4>
+					The <code> math.max()</code> returns the <strong>largest</strong> value of  a given Array.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let top1 = Math.max(9, 15, 46, 18);  //returns 46
+			let top2 = Math.max(-9, -13, -56 -54);  //returns -9
+			
+			document.getElementById("demo").innerHTML =
+			top1 + "&ltbr&gt" +
+			top2;		
+		</code></pre>
+	</div>
+	
+					<h4>The <code> min()</code> method</h4>
+					The <code> math.min()</code> returns the <strong>largest</strong> value of  a given Array.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let bott1 = Math.min(9, 15, 46, 18);  //returns 9
+			let bott2 = Math.min(-9, -13, -56 -54);  //returns -56
+
+			document.getElementById("demo").innerHTML =
+			bott1 + "&ltbr&gt" +
+			bott2;		
+		</code></pre>
+	</div>
+
+					<h4>The <code> pow()</code> method</h4>
+					<p>The <code> math.pow()</code> returns the <strong>base</strong>  to the <strong>exponent</strong> power.
+					<br>
+					It takes Two Arguments: <strong>base, exponent</strong>.
+					<br>
+					In this example <strong>3</strong> is raised to the power of <strong>4</strong>. the same as: <strong>3 * 3 * 3 * 3 = 81  </strong></p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let  pwr = Math.pow(3, 4);
+			
+			document.getElementById("demo").innerHTML = pwr; 		
+		</code></pre>
+	</div>
+					<h2><code>math</code> properties</h2>
+					<p>The <code>math</code> object has the following properties</p>
+					<div class="tBox"><table>
+						<thead>
+						  <tr>
+							<th>Property</th>
+							<th>Description</th>
+							<th>Approximate Value</th>
+						  </tr>
+						</thead>
+						<tbody>
+						  <tr>
+							<td><code>Math.E</code></td>
+							<td>Represents the base of natural logarithms</td>
+							<td>2.718</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.LN10</code></td>
+							<td>Represents the natural logarithm of <code>10</code>.</td>
+							<td>2.303</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.LN2</code></td>
+							<td>Represents the natural logarithm of <code>2</code></td>
+							<td>0.693</td>
+						  </tr>
+						  <tr>
+							<td><code>LOG10E</code></td>
+							<td>Represents the base <code>10</code> logarithm of <code>e</code>.</td>
+							<td>0.434</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.LOG2E</code></td>
+							<td>Represents the base <code>2</code> logarithm of <code>e</code>.</td>
+							<td>1.443</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.PI</code></td>
+							<td>Represents the ratio of the circumference of a circle to it's<br>
+							diamiter.</td>
+							<td>3.14159</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.SQRT1_2</code></td>
+							<td>Represents the square root of <code>1/2</code>.</td>
+							<td>0.707</td>
+						  </tr>
+						  <tr>
+							<td><code>Math.SQRT2</code></td>
+							<td>Represents the square root of <code>2</code>.</td>
+							<td>1.414</td>
+						  </tr>
+							</tbody>
+							  </table>
+					</div> 
+					<h1>Math Random</h1>
+					<p>Here we will learn how to generate a random number.</p>
+					<h4>The <code> random()</code> method</h4>
+					The <code> math.random()</code> method returns a random floating-point number.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			let random = Math.random();
+			
+			document.getElementById("demo").innerHTML = random;
+		</code></pre>
+	</div>
+					<h4>Get random integer between two numbers</h4>
+					<p>The example below will choose a random integer (number with no decimal point) between two numbers.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+		//HTML 
+		&ltp id="demo"&gt&lt/p&gt;
+		&ltbutton onclick="getRandonInt(1, 10)"&gt Random Number &lt/button&gt;
+
+		//javascript
+		// minimum is included maximum is excluded
+		function getRandomInt(min, max) {
+			document.getElementById("demo").innerHTML =
+			Math.floor(Math.random() * (max - min)) + min;
+		}
+		</code></pre>
+	</div>
+					<p>The example below includes this piece of code <code>+1</code> to include the <code>maximum</code> number.</p>
+	<div class="cBox">
+		<pre><code class="language-js">
+		//HTML 
+		&ltp id="demo"&gt&lt/p&gt;
+		&ltbutton onclick="getRandonInt(1, 10)"&gt Random Number &lt/button&gt;
+
+		//javascript
+		function getRandomInt(min, max) {
+			document.getElementById("demo").innerHTML =
+			Math.floor(Math.random() * (max - min +1)) + min;
+		}
+		</code></pre>
+	</div>
+</div><!--box 1 ends-->
+
+
+<div class="container"><!--box 2 starts-->
+					<h1><code>if...else</code> Statement</h1>
+					<p>The <code>if...else</code> is a <strong>conditional statement</strong>, These are used to execute 
+					a block of code based of different conditions. </p>
+
+					<h4>The <code>if</code> Statement</h4>
+					<p>The <code>if</code> will execute a block of code if a conditions are <code>true</code>.<br>
+					<strong>Syntax:</strong></p>
+	<div class="cBox">
+		<pre><code class="language-js">
+			if(condition){
+				//code to be run if condition is true
+			} 
+		</code></pre>
+	</div>
+			<p>Here we use a prompt to ask a user there age, if there over 18 an alert box will show.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+			let age = prompt("What is your Age");
+
+			if(age > 18){
+			alert("User is old enough!");	
+			}
+		</code></pre>
+	</div>
+					<h4>The <code>if...else</code> Statement</h4>
+					<p>The <code>else</code> statement executes the code if the condition is <code>false</code>,<br>
+						now the user will recive an alert box if they are under 18 years old.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+			let age = prompt("What is your Age");
+			
+			if(age > 18){
+			alert("User is old enough!");	
+			} else {
+				alert("Nice Try Young One");
+			}
+		</code></pre>
+	</div>
+					<p>In this example we use a form input to get value from user.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+			//HTML
+			&ltform&gt
+				&ltlabel&gtHow old are you?.&ltinput type="number" name="age" id="age"&gt &lt/label&gt
+				&ltbutton type="button" id="submit"&gtSubmit&lt/button&gt
+			&lt/form&gt
+
+			//javascript
+				document.getElementById("submit").addEventListener("click", function() {
+					let age = document.getElementById("age").value;
+					
+						if(age > 18){
+						alert("User is old enough!");	
+						} else {
+						alert("Nice Try Young One");
+						}
+						});
+		</code></pre>
+	</div>
+						<h4>The <code>else...if</code> Statement</h4>
+						<p>The <code>else...if</code> statement executes the code if the given condition is <code>true</code>, But 
+						only if the first condition is <code>false</code>.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+		
+			let x = prompt("Give me a number!");
+
+			if(x > 20){
+			 document.getElementById("demo").innerHTML = "Your number is greater than 20";	
+			} else if(x < 20){
+				document.getElementById("demo").innerHTML = "Your number is less than 20";	
+			} else {
+				document.getElementById("demo").innerHTML = "Your number is 20";	
+			}
+		</code></pre>
+	</div>
+						<p>This example greets a user depending on the time of day.</p>
+
+	<div class="cBox">			
+		<pre><code class="language-js">
+							
+			let user = prompt("What is Your Name");
+					
+			function greetUser(){
+				let time = new Date().getHours();
+				if(time < 11) {
+					return "Good Morning" + user;
+				} else if (time < 18) {
+					return "good Day" + user;
+				} else {
+					return "good Evening" + user;
+				}
+			}
+
+			document.getElementById("demo").innerHTML = greetUser();
+							</code></pre>
+						</div>
+			<h1>The <code>switch</code> Statement</h1>
+			<p>if your code contains a lot of <code> if </code> statements then the <code>switch</code> Statement 
+			can be used to make your code easier to read.<br>
+		The first example shows the color of the given car by checking what car is specified.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+								
+			let car = "ford";
+						
+			if(car == "ford") {
+				document.getElementById("demo").innerHTML = "The color is red"; // This code is run
+			}
+			if(car == "renult") {
+				document.getElementById("demo").innerHTML = "The color is yellow";
+			}
+			if(car == "mazda") {
+				document.getElementById("demo").innerHTML = "The color is blue";
+			}
+		</code></pre>
+	</div>
+					<p>The second example uses the <code>switch</code> statement instead of the <code>if</code> statement.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+												
+			let car = "ford";
+										
+			switch(car) {
+				case "renult": 
+					document.getElementById("demo").innerHTML = "The color is red";
+					break;
+					case "ford": 
+					document.getElementById("demo").innerHTML = "The color is yellow"; // This code is run
+					break;
+					case "mazda":
+					document.getElementById("demo").innerHTML = "The color is blue";
+					break;
+			}
+		</code></pre>
+	</div>
+					<p>As you can see the code is easier to read.
+
+					</p>
+					<p>
+						The <code>switch</code> statement matches an <code>expression</code> against given <code>values</code>
+						in the <code>case</code> clauses.<br>
+						The <code>switch</code> statement evaluates the <code>expression</code> to <code>value1</code>, then <code>value2</code> and so on,
+						If the <code>experssion</code> matches the given <code>value</code>, Then the associated code block is run.<br>
+						<strong>syntax:</strong></p>
+					<div class="cBox">			
+						<pre><code class="language-js">													
+							switch(expression) {
+								case "Value1": 
+									// Code block to run
+									break;
+								case "Value2": 
+									// code block to run
+									break;
+								case "value3":
+									// code block to run
+									break;
+							}
+						</code></pre>
+					</div>
+						<h4>The <code>break</code> keyword</h4>
+						<p>Notice the <code>break</code> keyword in the examples above, its roll is to stop the code execution after 
+						the evaluation matches a case. In the example below  with no <code>break</code> keyword all the code runs.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+																	
+			let car = "ford";
+															
+				switch(car) {
+					case "ford": //car is ford so this code will run
+						document.getElementById("demo").innerHTML = "The color is red";
+						// no break
+					case "renult":   // every following case will now run
+						document.getElementById("demo").innerHTML += "The color is yellow"; // This code is run
+					case "mazda":
+						document.getElementById("demo").innerHTML += "The color is blue";
+							}
+							</code></pre>
+						</div>
+						<h1>The <code>default</code> Clause</h1>
+						<p>If the <code>expression</code> does not match a <code>case</code> the <code>default</code> clause is executed.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+																						
+			let car = "sibb";
+																				
+			switch(car) {
+				case "ford": 
+					document.getElementById("demo").innerHTML = "The color is red";
+					break;
+				case "renult":  
+					document.getElementById("demo").innerHTML += "The color is yellow"; 
+					break;
+				case "mazda":
+					document.getElementById("demo").innerHTML += "The color is blue";
+					break;
+				default:
+					document.getElementById("demo").innerHTML = "That is not a car";
+					}
+		</code></pre>
+	</div>
+					<h1>Example</h1>
+					<p>In the example below the user picks an item from the drop down, The price of 
+					the selected item is displayed.</p>
+	<div class="cBox">			
+			<pre><code class="language-js">
+																										
+				///HTML
+				&ltlabel&gt Choose item
+					&ltselect id="items" onchange="checkPrice()"&gt
+						&ltoption value="item1"&gt item 1 &lt/options&gt
+						&ltoption value"item2"&gt item 2 &lt/option&gt
+						&ltoption value="item3"&gt item3 &lt/option&gt
+						&ltopton value="item4"&gt item 4 &lt/option&gt
+						&ltoption value="item5"&gt item 5 &lt/option&gt
+						&ltoption value="item6"&gt item 6 &lt/option&gt
+					&lt/select&gt
+				&lt/label&gt
+				&ltp id="price"&gt&lt/p&gt
+
+				//javascript
+				function checkPrice(){
+					var item = document.getElementById("items").value;
+					switch(item) {
+						case "item_1":
+						 	var amount = "£1.23"
+						 	document.getElementById("price").innerHTML = "The price of " + item + " is " + amount;
+						 	break;
+						case "item_2":
+							var amount = "£2.34"
+							document.getElementById("price").innerHTML = "The price of " + item + " is " + amount;
+							break;
+						case "item_3":
+							var amount = "£45.56"
+							document.getElementById("price").innerHTML = "The price of " + item + " is " + amount;
+							break;
+						case "item_4":
+							var amount = "£12.50"
+							document.getElementById("price").innerHTML = "The price of " + item + " is " + amount;
+							break;
+						case "item_5":
+							var amount = "£3.45"
+							document.getElementById("price").innerHTML = "the price of " + item + " is " + amount;
+							break;
+						default:
+							document.getElementById("price").innerHTML = "Sorry item out of stock, Please try again later";
+							}
+				}
+		</code></pre>
+	</div>
+
+							<h1>The <code>for</code> Loop</h1>
+							<p>If you need to run the same code over and over again, say accessing  values in an 
+							Array, like in the first example there is a lot of code to write, but this can be shortend
+							with the <code>for</code>, as seen in the second example.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">
+		let vegatables = ["carrot", "potato", "lettuce", "leeks", "peas" ];
+		let html = " ";
+		
+		
+		html += "&ltp&gt" + vegatables[0] + "&lt/p&gt";
+		html += "&ltp&gt" + vegatables[1] + "&lt/p&gt";
+		html += "&ltp&gt" + vegatables[2] + "&lt/p&gt";
+		html += "&ltp&gt" + vegatables[3] + "&lt/p&gt";
+		html += "&ltp&gt" + vegatables[4] + "&lt/p&gt";
+
+		document.getElementById("demo").innerHTML = html;
+		</code></pre>
+	</div>
+							<p>As you can see in the second example code in much shorted and more readable</p>
+						
+	<div class="cBox">			
+		<pre><code class="language-js">
+				let vegatables = ["carrot", "potato", "lettuce", "leeks", "peas" ];
+					let html = " ";
+								
+					for(i =0; i < vegitables.length; i++) {
+		
+					html += "&ltp&gt" + vegitables[i] + "&lt/p&gt";
+					}
+					document.getElementById("demo").innerHTML = html;
+		</code></pre>
+	</div>
+					<p>A <code>for</code> loop repeatedly executes statements as long as the condition is true,<br>
+					<strong>Syntax:</strong></p>
+	<div class="cBox">			
+		<pre><code class="language-js">			
+					for(initialExpression; condition; incrementExpression) {
+						//statements or code blocks
+					}
+					
+		</code></pre>
+	</div>
+				<p><ul>
+					<li><strong>initialExpression</strong> -to initializes the loop counter.</li>
+					<li><strong>condition</strong> - If <code>true</code>, the loop will run, if <code>false</code> 
+						code will not execute.</li>
+						<li><strong>incrementExpression</strong>set the increment of loop counter. Runs everytime the
+						statement runs.</li>
+				</ul></p>
+						<p>The <strong>statement</strong> will run 5 times.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">			
+					for(let i = 0; i < 5; i++) {
+						document.write("&ltp&gtHello World!&lt/p&gt")
+					}
+								
+		</code></pre>
+	</div>
+				<p>The loop counter is initialized with the value of <code>i = 0</code>, them the <code>condition</code>
+				is set, <code>i</code> must be less than 5 for the loop to run, The loop is then incremented,
+				 <code>i++</code> increments the counter everytime the code block is executed. </p>	
+
+				<h1><code>For...of</code> loop</h1>
+				<p>The <code>for...of</code> statement is used to loop over <code>iterable objects</code>, which
+				includes <code>arrays</code> and <code>strings</code>.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">			
+					for(variable of iterable) {
+						//statements or code blocks
+					}
+		</code></pre>
+	</div>
+			<ul>
+				<li><code>variable</code> -At each iteration the value is assigned to <code>variable</code>.</li>
+				<li><code>iterable</code> -The object being iterated over</li>
+			</ul>						
+		<p>Below you can see it loop over an array.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">	
+			let names = ["Dave", "Steve", "scott", "paul"];		
+			for(value of names) {
+				document.write(value + "&ltbr&gt");
+			}
+		</code></pre>
+	</div>
+			<p>This example shows a loop over a <code>string</code>.</p>
+	<div class="cBox">			
+		<pre><code class="language-js">	
+			let text = "Dave";	
+			for(letter of text) {
+				document.write(letter + "&ltbr&gt");
+			}
+		</code></pre>
+	</div>
+					<h1>The <code>while</code> loop</h1>
+				<p>The <code>while</code> loop will execute statements as long as conditions are true.<br>
+				<code>Syntax:</code></p>
+	<div class="cBox">			
+		<pre><code class="language-js">	
+			while(condition) {
+				//code to run
+			}
+		</code></pre>
+	</div>
+	<ul>
+		<li><code>condition</code> -The expression evaluated, if <code>true</code> code will run, if 
+		<code>false</code> will not run.</li>
+		<li><code>statements</code> -code block to run if conditions are <code>true.</code></li>
+	</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+						
+</div><!--box 2 ends-->
+<div class="container"><!--box 3 starts-->
+	
+</div><!--box 3 ends-->
+
+
+
+
+
+
+
+
+</div> <!--ContainerMain end-->	 
+ <script src="prism.js"></script> 
+	<script src="script.js"></script>  
+	</body>
+    </html>

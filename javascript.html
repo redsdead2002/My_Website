@@ -1,0 +1,2550 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="generator" content="CoffeeCup HTML Editor (www.coffeecup.com)">
+    <meta name="dcterms.created" content="Mon, 14 Feb 2022 23:43:01 GMT">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+	<link href="prism.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="javascript.css"/>
+	
+    <title>Javascript section 1</title>
+    
+    <!--[if IE]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+        <header>
+	  
+
+	      <span id="pageNav" style="font-size: 30px; cursor:pointer" onclick="openNav()";>&#9776;</span>
+				 
+	 <div id="mySidenav" class="sidenav" onmouseleave="closeNav()">
+	 	  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+		     <a href="index.html"> Home </a>
+		       <a href="sign-up.html"> Sign up </a>
+		        <a href="log-in.html"> Log in </a>
+		         <a href="contact-us.html"> Contact us </a>
+		          <a href="HTML.html"> Html section </a>
+		        <a href="css.html"> Css3 section </a>
+		            <a href="javascript.html"> Javascript section</a>
+		             <a href="javascript.html#intro">Intro </a>
+		              <a href="javascript.html#codePlace"> Code Placement </a>
+					   <a href="javascript.html#displayOutput"> Display Output</a>
+		           <a href="javascript.html#state"> Statements </a>
+		            <a href="javascript.html#varDecleration"> Variable Decleration </a>
+		             <a href="part7.html"> Part 7 </a>
+		              <a href="part8.html"> Part 8 </a>
+					   <a href="part4.html"> Part 4 </a>
+		           <a href="part5.html"> Part 5 </a>
+		            <a href="part6.html"> Part 6 </a>
+		             <a href="part7.html"> Part 7 </a>
+		              <a href="part8.html"> Part 8 </a>
+		              </div>
+					
+					  </header>
+					
+					  
+					  
+					  	
+	<!--Content-->
+<div class="containerMain">
+	<div class="container" id="intro"><!--box 1 starts-->
+           <p> Welcome to our javascript section . To learn javascript it's better to have a basic understanding of  HTML  and 
+	         css3. If you don't why not visit our <a href="index.html">HTML</a> and <a href="css.html">css</a> sections,
+			 If not read on and learn how to setup a basic <strong>html</strong> page for using in your lessons, 
+	       You can read as many books and watch every how-to video on you tube, But i think the best way to learn 
+		   to code is by example,
+			</p>
+			<p>The lessons are set out in sections and contain example code you can write in your files, Please do 
+				not just copy and paste the code from the examples, write the code out yourself and you will pickup
+			thing's up a lot quicker, The code boxes are full of information about the code written inside, 
+		</p>
+	       <h1>What is javascript</h1>
+	       <p>Javascript is a scripting language mainly used to manipulate web pages. Below is a quick demo of what
+		    javascript can do.</p>
+			
+			<div style="margin: 30px; width: 50%;">
+	         <h4>Change Background color</h4>
+		   <div  onclick="changeColor(this)" style="background-color: red;" id="dem1">
+		     Click to change me.
+			</div>
+			</div>
+			
+			<div style="margin: 30px;">
+			 <h4>Call Dialog Box</h4>
+			 <button id="btn1">Call Dialog Box</button>
+			</div>
+			
+			<div style="margin: 30px;">
+	          <h4>Change content</h4>
+	          <p id="demo2"> Hello World!</p>
+	          <button type="button" onclick="dem2()">Change Content</button>
+			</div>
+			
+			<div style="margin: 30px;">
+	           <h4>Change styling</h4>
+	           <p id="demo3" style="color: gold;">Hello World!</p>
+	           <button type="button" onclick="dem3()">Change Style</button>
+			</div>
+			
+			
+			<div style="margin: 30px;">
+	           <h4>Show or hide an element</h4>
+			   <div id="showHide" style="width:100px; height:100px; background: red;">Hi Man!</div>
+			   <button type="button" onclick="show()">Show</button>
+			   <button type="button" onclick="hide()">Hide</button>
+	        </div>
+			<p>This is just a glimpse at what javascript can do to make your website interactive for your visitor, So lets 
+				get you setup to follow the lessons,</p>
+				<p>First thing is to setup a page to display your code output in,<br>So first thing  you need is an IDE
+				or a simple text editor, Most people use Microsoft <a href="https://code.visualstudio.com/download">studio code.</a>
+				But this can be quite complicated to setup if your new to coding, Or you can use a simple text editor like
+				 <a href="https://notepad-plus-plus.org/downloads/">Notepad++.</a> This is the easiest and quickest setup.<br> <br>
+				  So lets begin by putting a folder  for storing all our code, called <code class="singleCode">my project</code> on your desktop,
+				  Next open your folder, right click inside your folder and click on new text document. Write the code below in your text file.</p>
+	<div class="cBox">
+		<pre class="c1">
+			<code class="language-js">
+	&lt!DOCTYPE html&gt 
+		&lthtml&gt	
+		&lthead&gt
+		&ltlink rel="stylesheet" href="style.css"/&gt          //This is a link to our stylesheet
+		     &lttitle&gtMy javascript&lttitle&gt           //The title tag is what you see on the web pages tab
+		&lt/head&gt
+
+		&LTbody&gt
+			&ltp id="demo"&gtMy demo &lt/p&gt     //This is our paragraph for our code output, it has an id of demo
+						
+			
+			&ltscript src="script.js"&gt&lt/script&gt   //This is a link to our javascript sheet
+			
+		&lt/body&gt
+		&lt/html&gt
+		</code></pre> 
+	</div>
+	<p>Now click on file, save as and save your file with  extension <code class="singleCode">.html</code> and not <code class="singleCode">.txt</code>.<br>
+	Check file path is correct for the <code class="singleCode">my projects</code> folder,<br> Again right click inside your folder and click on new text document and write the code below inside, Then save it the same way as your
+	html file, but with extension <code class="singleCode">.css</code>.</p>
+	
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		 //This code goes in your style.css
+			#demo{                     //This links to our paragraph with the id(#) of demo
+				background-color: red;             //This changes the background color to red
+				color: white;                           //This changes the text color to white
+			}
+		</code></pre> 
+	</div>
+	<p>Now do the same for your javascript file and save with extension<code class="singleCode">.js</code>, and add the code below.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		 //This code goes in your script.js
+			alert("Hello World");           //you will get an alert from this saying  Hello World!
+		</code></pre> 
+	</div>
+	<p>Now you should have an alert box say Hello World when you open your page and a red paragraph.(if not check your code).
+		Ok now your all set to go, One thing to remember, Delete the code after each exercise or you can copy to a txt file and save.
+	</p>
+</Div><!--box 1 ends-->
+
+
+
+
+
+<div class="container"> <!--box 2 starts-->
+
+	    <h1>Code placement</h1>
+	    <p>There are four ways to insert javascript in your web page,
+	    </p>
+	    <p>Javascript can be positioned in the head or the body before the end tag, Or the preferred way is an
+		 external script with a link placed in the body above the body end tag.  The code in an external script does not use the 
+		 <code class="singleCode">  &ltscript&gt&lt/script&gt </code>  tag. inside the script sheet as in the example above.</p>
+<div class="cBox">
+    <pre class="c1"> <code class="language-js">
+				//In the head
+    &lthead&gt 
+    &lttitle&gtJava script in the head&lt/title&gt
+		 
+	&ltscript type="text/javascript"&gt
+	function (){        
+	alert("Hello Mum!"); 
+	}                   
+	&lt/script&gt
+    &lt/head&gt
+ 
+			//In the body 
+	&LTbody&gt
+	&ltp&gtJavascript in the body&lt/p&gt
+	   
+	&ltscript type="text/javascript"&gt
+	function (){
+	alert("Hello Mum!");
+	}
+	&lt/script&gt
+	&lt/body&gt
+	 
+			//External script
+	&ltbody&gt
+	&ltscript src="script.js"&gt&lt/script&gt
+	&lt/body&gt  
+    </code></pre> 
+</div>
+ 
+
+       <h3 id="displayOutput">Displaying your output</h3>
+	   <p>You can output your code in one of four different ways Using the console, a dialog box, 
+	   writing to an HTML element and writing to the browser window. We will be using the dialog box, <code class="singleCode">.innerHTML</code>
+	   and <code class="singleCode">document.write</code>.
+	  </p>
+
+    <h3>Using the console</h3>
+	    <p>Using the <code class="singleCode">console.log</code> function we can output to your browsers developers console.
+	    Add this code to your internal script.</p>
+	<div class="cBox">
+	<pre class="c1">
+		<code class="language-js">
+	let x = 5;
+	let y = 5;
+	let sum = x + y;
+	console.log(sum);
+	</code></pre>
+	</div>
+	    <p>Now open your browsers console, on goggle chrome click the four dots in the top right corner
+	     them more tools then developers tools, Click console and refresh your
+	     browser and you Should see an output of 10.
+	     </p>
+	 
+        <h3>Dialog box</h3>
+	    <p>Using the <code class="singleCode">alert()</code> function we can see a dialog box with the output, 
+	    add the code below to your script.
+	    </p>
+	<div class="cBox">
+	<pre class="c1">
+		<code class="language-js">
+	function output(){
+	let x = 10;
+	let y = 15;
+	let sum = x + y;     	// 10 + 15 = 25 
+	alert(sum);}	       //dialog box will output 25
+	</code></pre>
+	</div>
+
+
+        <h3>Write to html element</h3>
+	    <p>Using the <code class="singleCode">innerHTML</code> property we can add or replace text in an element.
+	     add the code below to add text to the demo.
+	    </p>
+
+
+    <div class="cBox">
+    <pre class="c1"><code class="language-js">
+    &lthtml&gt
+    &lthead&gt
+	&lttitle&gt try it yourself&lt/title&gt
+    &lt/head&gt
+		 
+	&ltbody&gt
+	&ltp&gt id="demo"&gt&lt/p&gt 
+	&ltbutton type="button" onclick="inner()"&gt Write&lt/button&gt  //When you click this button, the onclick will call the inner() function
+			 
+	&ltscript&gt
+	function inner(){         //This function is called when onclick() is activated.
+	let x = 5;               
+	let y = 20;
+	let sum = x + y;           //variable x is added to y,  5 + 20,  let sum = 25
+				  
+	document.getElementById("demo").innerHTML = sum;     //This sends the output of sum to our paragraph 
+	}
+	&lt/script&gt
+	&lt/body&gt
+	&lt/html&gt
+    </code></pre>
+    </div>
+			 
+	    <h3>Write to browser window</h3>	
+	    <p>Using <code class="singleCode">document.write()</code> function you can write to the document.
+	    <strong>note:</strong> use this for testing only as it will wipe all html content
+	    of current page.
+	    </p>
+    <div class="cBox">
+       <pre class="c1"><code class="language-js">
+	&lthtml&gt
+	&lthead&gt
+	&lttitle&gt try it yourself&lt/title&gt
+	&lt/head&gt
+		                                                              //Same a example above , but outputs to the document 
+	&ltbody&gt
+	&ltp&gt id="demo5"&gt&lt/p&gt 
+	&ltbutton type="button" onclick="browser()"&gt Write/&gt
+			 
+	 &ltscript&gt
+	function browser(){
+	var x = 19;
+	var y = 31;
+	var sum = x + y;
+				  
+	document.write(sum);
+	}
+	&lt/script&gt
+	&lt/body&gt
+	&lt/html&gt
+	</code></pre>
+    </div>
+			   
+		        <p>Now refresh your browser window all your content will return</p>
+</div> <!--box 2 ends-->
+
+
+
+<div class="container"> <!-- box 3 starts-->
+	      <h1 style="width: 100%">Statements</h1>
+           <p>Your <code>javascript</code> program is made up of statements that follow a set syntax and must 
+            end or be separated by ( if on the same line)  a semicolon(;), Below is a single line Statement.
+           </p>
+           <code class="singleCode">document.getElementById("demo").innerHTML = "Hello World!";</code>
+            <p> camelCase is used <strong>eg:</strong> getElementById , The first word is started in lower case,
+            Every following word starts with a uppercase (capital letter).
+            </p>
+            <p>Below is a two line statement, You can have as many statement in your code block as you need.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = "Hello World!";
+	document.getElementById("demo").innerHTML = "Hello Everyone!";                                     
+	</code></pre>
+	</div>
+          <h3>Grouping statements</h3>
+		  <p>Statements can be grouped inside curly <code class="singleCode">brackets({...})</code>, That are called code blocks.
+		   Code blocks allow statements to be executed together, commonly used in functions, See below.</p>
+    <div class="cBox">
+	<pre class="c1"><code class="language-js">
+					//write code in script.js
+    function myFunc(){           									
+	document.getElementById("demo").innerHTML = "Hello World!";				//The function myFunc() will print "Hello World!"
+	document.getElementById("demo").innerHTML += "Hello Everyone!";			//and "Hello Everyone!" to demo
+	}
+		myFunc();			//To use a function it must be envoked(called), you will learn more on functions later
+	</code></pre>
+    </div>
+				   
+        <h3>Keywords</h3>
+	    <p>Each keyword has its own meaning , To declare a variable  we use the var, let or const keyword.
+	    You will learn more about keywords as we go through our lessons.</p>
+    
+	<code class="singleCode">
+    let x = 5;  
+	</code>
+ 
+	   <h3 style="width: 100%;">javascript syntax</h3>
+	   <p>You must follow a set of rules (syntax) to correctly construct a program.
+	   </p>
+	   <h3  id="varDecleration">Variable decleration</h3>
+	   <p>Think of a variable as a box, the box contains a value. Below we have declared a variable
+	   called num (our box), the content  is the value 5,
+	   </p>
+	   <code class="singleCode">let num = 5;</code>,
+	   <p>To declare a variable we use the keyword let to create it and an equal = sign to assign a value to it.
+	   It must also end with a semicolon (;).
+	   </p>
+	   <p>The <code class="language-js">num</code>  in the example above is called an identifier which are used to name variables,
+	    When naming a variable Try using a name that represents is use.
+		Variables are also case sensitive.
+		 </p>
+		 <p>In this example Num and num are two different variables.
+		 </p>
+    <div class="cBox" style="width: 100%;">
+    <pre class="c1"><code class="language-js">
+    let Num = 40;
+	let num = 30;   
+	</code></pre>
+    </div>
+
+		  
+		 <h3>Comments</h3>
+		 <p> Comments are used to make reading your code easier by adding notes or comments
+		 that don't show in the browser. There are two types of comments.</p>
+    <div class="cBox">
+	<pre class="c1"><code class="language-js">
+	Single line comments:  // Add your comment here
+	multi-line comments: /*This can span multiple lines */
+	</code></pre>
+    </div>
+		 <h3>Variables</h3>
+		 <p>Variables are used to store data, The data stored can be a string (text) a number or other data. 
+		 Below the variable has been declared with <code class="singleCode">firstName</code> and has been initialized to the value of  "Scott", 
+		  <code class="singleCode">lastName</code> has a value of "Campbell" and <code class="singleCode">age</code> has a value of 53.</p>
+    <div class="cBox">
+	<pre class="c1"><code class="language-js">
+ 			    // Add this to script.js
+				let firstName = "Scott";
+				let lastName = "Campbell";
+				let age = 53;
+	 
+   				 document.getElementById("demo").innerHTML = firstName + " " + lastName +  age ;
+   			
+	</code></pre>
+    </div>
+        
+		
+		<p>You can declare multiple variables using a single statement, sperate them with comma(,) 
+		</p>
+		  <p><code class="singleCode">var firstName = "Scott", lastName = "Campbell", age = 53; </code></p>
+			 
+		<p>Remember and use camelCase if you use a multi-worded variable. The equal sign (=) used to assign a value
+		to a variable is called an assignment operator, more on them later. </p>
+  
+   
+
+	<h3>Naming variables</h3>
+	<p>Variable names are called <code class="singleCode">identifiers</code> and can be as short as a single letter <code class="singleCode">(a,b,c,.....z)</code> or a 
+	descriptive name like <code class="singleCode">firstName</code> and <code class="singleCode">lastName</code></p>
+	<p><strong>Rules</strong></p>
+	
+	<ul>
+	   <li>Name can only start with a letter, dollar sign or an underscore.</li>
+	   <li>Cannot start with a number.</li>
+	   <li>Is case sensitive</li>
+	   <li>Can only contain letters, digits, underscore or a dollar sign.</li>
+	   <li>Reserved word (var, function, if, else, etc) cannot be used.</li>
+	 </ul>
+</div><!--box 3 ends-->
+
+
+<div class="container"><!--box 4 starts-->
+
+       <h1 style="width: 100%">Data types</h1>
+        <p>
+         Data types are important in all programming languages, and represent different types of data stored and used in your programs. 
+         </p>
+         <h3>String type data</h3>
+        <p>The <code class="singleCode">String</code>  Data type is used to represent text, strings can be written in double or single quotes</p>
+    <div class="cBox">
+    <pre class="c1"><code class="language-js">
+    let name1 = "Scott Campbell";
+    let name2 = 'Sandra Mctaggart';
+	</code></pre>
+    </div>
+
+         <p>If a string contains single quotes in the text use double quotes, and if the text contains
+     double quotes use single quotes .
+         </p>
+    <div class="cBox">
+    <pre class="c1"><code class="language-js">
+    let para1 = " Her name is 'Sandra'";
+    let para2 = 'His name is "Scott"';
+    </code></pre>
+    </div>
+         <h3>Number type data</h3>
+         <p>Numbers can be either an integer or a floating point ( number with decimal points)</p>
+    <div class="cBox">
+	<pre class="c1"><code class="language-js">
+	let y = 21; // an integer
+	let x = 4.7; // floating point
+    let sum = y + x; //add them together,  outputs 25.7
+    </code></pre>
+    </div>
+         
+	 
+         <h3>Combine Numbers and Strings</h3>
+        <p>
+	    If you combine a string with another string it will return a string,
+	  	combine a number with another number it returns a number;
+		combine a string and a number returns a string, different sequences 
+		produce different results since javascript evaluates from left to right.
+     	</p>
+	<div class="cBox">
+   	<pre class="c1"><code class="language-js">
+	let text1 = 10 + 11 + "Sandra";   // 21Sandra
+	let text2 = "Sandra" + 10 + 11;   //  Sandra1011
+
+	document.getElementById("demo").innerHTML = text1 + "&ltbr&gt" + text2;
+    </code></pre> 
+	</div>
+
+
+   		  <h3>Boolean type data</h3>
+     	<p> This is a logical data type and can only return a <code class="singleCode">true </code> or <code class="singleCode"> false </code> value.
+     	Mainly used in conditional testing, Booleans are used with comparison operators. (more on them later)</p>   
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+    let isMyCarCool = true;
+    let  amICool = true;
+
+    document.getElementById("demo8").innerHTML = "Is my car cool" + isMyCarCool 
+    + &ltbr&gt + "Am i cool" + amICool;
+	</code></pre>
+	</div>
+	   	 	 
+	  
+	    	<h3>Undefined Data type </h3> 
+	    	<p>If a variable is declared but not assigned a value, it returns a value of <code class="singleCode">undefined</code></p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	let title;       //title has no value, so is undefined
+
+	alert("title");
+	</code></pre> 
+	</div>  
+	   
+	  		<h3>null Data type</h3>
+	  		<p><code class="singleCode">null</code> data type has a value of null-it is not an empty string " " or 0,</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js"> 
+	let jam = null;
+	alert("jam");
+	</code></pre>
+	</div>
+	 		<p>You can empty a variable by giving a value of  <code class="singleCode">null</code></p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	let car = "escort";
+	document.write(car + "&ltbr&gt");   //escort
+	 car = null;			//remove value of car
+	document.write(car);   //car = null
+	</code></pre>
+	</div>
+	
+	
+			<h3>Object data type</h3>
+			<p>An object data type is a collection of related data, They contain
+			 properties that  are written in <code class="singleCode">key: value;</code> pairs that are separated by a comma (,)
+			and written inside curly braces { }.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+    let Car = {
+	color: "red",
+	engine: "2.0l",
+	isFast: true,
+	};
+
+    document.getElementById("demo").innerHTML =
+    "Car  &ltbr&gt" +
+    "color: " + Car.color + "&ltbr&gt" +
+    "engine: " + Car.engine + "&ltbr&gt" +
+    "isFast: " + Car.isFast;
+	</code></pre>
+	</div>
+  			 
+
+
+    		 <h3>Arrays</h3>
+     		<p>The arrays in javascript are an <code class="singleCode">object</code> data type , They must be separated by a comma(,)
+    		 and written in square brackets([ ])</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	let car = ["escort", "fiesta", "capri"];
+
+	document.getElementById("demo").innerHTML = 
+	car[0] + " " + car[1] + " " + car[2];   //access each object by index [2]
+	</code></pre>
+	</div>
+    		
+
+    		<h3>typeof Operator</h3>
+    		<p>This will return a string value of the data type of the evaluated operand,These data types are called 
+			Primitive data types, they are not objects and have no methods.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	typeof "Her name is Sandra" + "&ltbr&gt" +    //string   
+	typeof 21 + "&ltbr&gt" +                         //number
+	typeof true + "&ltbr&gt" +                            //boolean
+	typeof undefined;                                       //undefined
+	</code></pre> 
+	</div>
+			<h3>Primitive Data</h3>
+			<p>Primitive data are not objects and have no methods.<br>
+			There are 4 primitive data types:</p>
+			<ul>
+				<li>string</li>
+				<li>number</li>
+				<li>boolean</li>
+				<li>undefined</li>
+			</ul>
+			
+   			<h3>Complex Data</h3>
+			<p>There are two complex data types and both can be returned using <code class="singleCode"> typeof </code> operator.<br>
+			<ul>
+				<li>object</li>
+				<li>function</li>
+			</ul></p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = 
+	typeof { firstName: "Scott", lastName: "Campbell", age: 53} + "&ltbr&gt" +  //object
+	typeof ["escort", "Capri", "fiesta"] + "&ltbr&gt" +                    //object
+	typeof null + "&ltbr&gt" +                                             //object
+	typeof function myFunc(){};                                            //function
+	</code></pre>
+	</div>
+</div> <!--box 4 ends-->
+
+
+<div class="container"><!--box 5 starts-->
+    		<h1>Operators</h1>
+			<p>Operators can be used to assign,compare and combine values 
+			as well as perform arithmetic operations and more</p>
+
+     		<h3>Assignment operators</h3>
+	 		<p>This is used to assign a value to a variable, and uses the <code>(=)</code> sign.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+		 // Add code to script.js
+	let x = 96;			  	//This assigns the value of 96 to the variable x
+	let y = 34;				//This assigns the value of 34 to the variable y
+
+	let answer = x + y;			   //This assigns the value of x + y to the variable answer
+	document.getElementById("demo").innerHTML = answer;		   	 //outputs 130 to our demo
+	</code></pre> 
+	</div>
+           
+
+    		<h3>Arithmetic operator</h3>
+   	    	 <p>The arithmetic operator is used to perform addition, subtraction, multiplication and division between values.
+			They take a numerical value as there operands and return a numerical value. There are 
+			eight basic Arithmetic operators
+			</p>
+	<div class="tBox"><table>
+        <thead>
+          <tr>
+            <th>Operator</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>+</td>
+            <td>Addition</td>
+          </tr>
+          <tr>
+            <td>-</td>
+            <td>Subtraction</td>
+          </tr>
+          <tr>
+            <td>*</td>
+            <td>Multiplication</td>
+          </tr>
+          <tr>
+            <td>/</td>
+            <td>Division</td>
+          </tr>
+          <tr>
+            <td>**</td>
+            <td>Exponentiation</td>
+          </tr>
+          <tr>
+            <td>%</td>
+            <td>Remainder</td>
+          </tr>
+          <tr>
+            <td>++</td>
+            <td>Increment</td>
+          </tr>
+          <tr>
+            <td>--</td>
+            <td>Decrement</td>
+          </tr>
+        	</tbody>
+      		</table>
+	</div> 
+    
+
+
+			<h3 style="width: 100%">Addition Operator(+)</h3>
+			
+   			 <p>The addition operator performs basic addition.</p>
+	<div class="cBox">	
+			<pre class="c1"><code class="language-js">
+	let num1 = 5;
+	let num2 = 9;
+	let sum = num1 + num2;		  		//num1 + num2 = sum
+	document.write(sum);  					   //same as 5 + 9 = 14 
+	</code></pre>
+	</div>
+			<p>The addition operator can also be used to concatenate or add strings together.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">		 
+	let text1 = "I love";
+	let text2 = "Sandra"; 							 // I love Sandra
+	let sentence = text1 + text2;
+	document.write(sentence);
+	</code></pre>
+	</div>
+    		<h3 style="width: 100%">Subtraction Operator(-)</h3>
+    		<p>The subtraction operator performs basic subtraction.</p>
+	<div class="cBox">   
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	let num2 = 4;		  					  //num1 - num2 = product
+	let product = num1 - num2;				  //same as 9 - 4 = 5	 
+	document.write(product);
+	</code></pre>
+	</div>
+    		<h4>Multiplication Operator(*)</h4>
+    		 <p> The multiplication operator performs basic multiplication.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	let num2 = 2;
+	let quotient = num1 * num2;				  		  //num1 * num2 = quotient
+	document.write(quotient);						  //same as 9 * 2 = 18
+	</code></pre>
+	</div>
+   			 <h4>Division Operator(/)</h4>
+   			 <p> The Division operator performs basic division.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	let num2 = 2;		  					  //num1 / num2 = test
+	let test = num1 / num2;   				  //same as 9 / 2 = 4.5
+	document.write(test);
+	</code></pre>	
+	</div>
+			<h4>Exponentiation Operator(**)</h4>
+   			 <p>The Exponentiation operator returns the value of raising its first operand to the power of the second operand.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	var num1 = 9 ** 3;	  					  //same as 9 * 9 * 9 = 729
+	document.write(num1);
+	</code></pre>
+	</div>
+			<h4>Remainder Operator(%)</h4>
+  			  <p>The remainder operator returns the remainder when the first operand is divided by the second.</p>
+	<div class="cBox"> 	
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	let num2 = 2;						//num1 % num2 = 1
+	let quotient = num1 % num2;			//same as  9 / 2 = 2 r1 (remainder)
+	document.write(quotient);
+	</code></pre>
+	</div>
+			<h4>Increment Operator(++)</h4>
+     		<p>The increment operator  adds one to its operand and return its value. </p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	num1++;   	 		  			//9 + 1 = 10
+	let num2 = 2;
+	num2++;   	 					//2 + 1 = 3
+	let quotient = num1 + num2;		  //10 + 3 = 13
+	document.write(quotient);
+	</code></pre>
+	</div>
+ 			<h4>Decrement Operator(--)</h4>
+   			<p>The decrement operator deducts one from its operand and returns its value.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let num1 = 9;
+	num1--;     //9 - 1 = 8
+	let num2 = 2;
+	num2--;       //2 - 1 = 1
+	let quotient = num1 / num2;				  //8 / 1 = 8
+	document.write(quotient);
+	</code></pre>
+	</div>
+			<h4>Operator Sequence</h4>
+    		<p>The operator sequence sets the order of performed operations in a math's expression.</p>
+ 	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let num = 10 + 3 * 5;    // Division performed first so 3 * 5 = 15, 10 + 15 = 25
+	document.write(num); 
+	</code></pre>
+	</div>
+    		<p>You may have noticed that the result of the expression above is 25 and not 65 as expected,
+			This is because multiplication is performed before addition.</p>
+			<code class="singleCode">3 * 5 = 15</code> and then <code class="singleCode">10 + 15 = 25</code>
+    		<p>The operator sequence is multiplication is performed first then division second, addition is third
+    		and subtraction last.
+    		If you want to perform say addition first then we can use grouping for that, grouped expressions 
+			are performed first before the others, just use parentheses () to group expressions.</p>
+    		<code class="singleCode">let y = (10 + 3 ) * 5;</code>.
+			<p>The above expression returns 65 because 10 + 3 = 13, then 13 * 5 is 65.</p>
+</div><!--box 5 ends-->		
+
+
+
+
+
+<div class="container"><!--box 6 starts-->
+    		<h1>Assignment Operators</h1>
+    		<p>The Assignment operator gives a value to its left hand operand based on the value of its right hand operand,
+   			 Below is a list of the 7 basic assignment operators:</p>
+     <div class="tBox">
+		 <table>
+       	 <thead>
+          <tr>
+		    <th>Name</th>
+            <th>Operator</th>
+            <th>Meaning</th>
+          </tr>
+       	 </thead>
+       	 <tbody>
+          <tr>
+		    <td>Assignment</td>
+            <td>x = y</td>
+            <td>x = y</td>
+          </tr>
+          <tr>
+		    <td>Addition assignment</td>
+            <td>x += y</td>
+            <td>x = x + y</td>
+          </tr>
+          <tr>
+		    <td>Subtraction assignment</td>
+            <td>x -= y</td>
+            <td>x = x - y</td>
+          </tr>
+          <tr>
+		    <td>Multiplication assignment</td>
+            <td>x *= y</td>
+            <td>x = x *= y</td>
+          </tr>
+          <tr>
+		    <td>Division assignment</td>
+            <td>x /= y</td>
+            <td>x = x / y</td>
+          </tr>
+          <tr>
+		    <td>Remainder assignment</td>
+            <td>x %= y</td>
+            <td>x = x & y</td>
+          </tr>
+          <tr>
+		    <td>Exponentiation assignment</td>
+            <td>x **= y</td>
+            <td>x = x ** y</td>
+          </tr>
+        </tbody>
+        </table> 
+	</div>
+
+		
+	  
+    			 <h4>Addition Assignment(+=)</h4>
+    			 <p>The addition assignment operator adds the value of  the <code class="singleCode">x</code> and <code class="singleCode">y</code> operand and 
+					assigns the value to the <code>x</code> variable.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let x = 4;
+	let y = 3;
+	x += y;    //same as x = x + y
+	document.write(x);  
+	</code></pre>
+	</div>
+				<p>It can also be used to concatenate or add strings together.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">		 
+	let x = "I love";
+	let y = "Sandra";
+	x += y;
+	document.write(x);
+	</code></pre>
+	</div>
+    			<h4>Subtraction Assignment(-=)</h4>
+    			<p>The subtraction assignment operator subtracts the value of the <code class="singleCode">x</code> operand from the <code class="singleCode">y</code> 
+				operand and assigns the value to <code>y</code> variable.</p>
+	<div class="cBox">   
+	<pre class="c1"><code class="language-js">
+	let y = 5;
+	let x = 4;
+	y -= x;    //same as y = y - x
+	document.write(y);
+	</code></pre>
+	</div>
+    			<h4>Multiplication Assignment(*=)</h4>
+				<p> The multiplication assignment operator multiples the value of  the <code class="singleCode">x</code> operand and <code class="singleCode">y</code> 
+					operand and assigns the value to the <code class="singleCode">x</code> variable.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let x = 44;
+	let y = 3;
+	x *= y;    //same as x = x * y
+	document.write(x);
+	</code></pre>
+	</div>
+    			<h4>Division Operator(/=)</h4>
+				<p> The Division assignment operator divides the <code class="singleCode">y</code> operand by the <code class="singleCode">x</code> operand,
+					and assigns it to the <strongx>y</strong> variable.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let y = 15;
+	let x = 3;
+	y /= x;   //same as  y = y / x       // y / x = 15
+	document.write(y);
+	</code></pre>
+	</div>
+				<h4>Exponentiation Assignment(**=)</h4>
+				<p>The Exponentiation assignment operator raises  the  <code class="singleCode">x</code> operand to the power of the <code class="singleCode">y</code> 
+					operand and stores the value in the x variable.</p>
+	<div class="cBox">	
+	<pre class="c1"><code class="language-js">
+	let x = 2;
+	let y = 4
+	x **= y    //same as x = x ** y     2 * 2 * 2 * 2 = 16
+	document.write(x);
+	</code></pre>
+	</div>
+				<h4>Remainder Assignment(%=)</h4>
+    			<p>The remainder assignment operator returns the remainder when the <code class="singleCode">x</code> operand is divided by the <code class="singleCode">y</code>
+					operand and assigns it to the <code class="singleCode">x</code> variable.</p>
+	<div class="cBox"> 	
+	<pre class="c1"><code class="language-js">
+	let x = 7;
+	let y = 3;
+	x %= y;   //same as x = x % y  
+	document.write(x);      // 7 divided by 3 is 2 remainder 1, so 1 is assigned to x
+	</code></pre>
+	</div>
+
+	
+				<h1>Advanced Assignment Operators</h1>
+				<div class="tBox">
+					<table>
+					   <thead>
+					 <tr>
+					   <th>Name</th>
+					   <th>Operator</th>
+					   <th>Meaning</th>
+					 </tr>
+					   </thead>
+					   <tbody>
+					 <tr>
+					   <td>Left shift assignment</td>
+					   <td>x &lt&lt= y</td>
+					   <td>x = x &lt&lt y</td>
+					 </tr>
+					 <tr>
+					   <td>Right shift assignment</td>
+					   <td>x &gt&gt= y</td>
+					   <td>x = x &gt&gt y</td>
+					 </tr>
+					 <tr>
+					   <td>Unsigned right shift  assignment</td>
+					   <td>x &gt&gt&gt = y</td>
+					   <td>x = x &gt&gt&gt y</td>
+					 </tr>
+					 <tr>
+					   <td>Bitwise AND assignment</td>
+					   <td>x &= y</td>
+					   <td>x = x & y</td>
+					 </tr>
+					 <tr>
+					   <td>Bitwise XOR assignment</td>
+					   <td>x ^= y</td>
+					   <td>x = x ^ y</td>
+					 </tr>
+					 <tr>
+					   <td>Bitewise OR assignment</td>
+					   <td>x |= y</td>
+					   <td>x = x | y</td>
+					 </tr>
+				   </tbody>
+				   </table> 
+			   </div>
+</div><!--box 6 ends-->
+
+
+<div class="container"> <!--box 7 starts-->
+    		   <h1>String Operators</h1>
+    		   <p>The string operators are used to concatenate and add strings, The Addition operator (+) and the 
+    		   addition assignment operator <code>(+=) </code>are the string operators. 
+    		   </p>
+    		   <p>Example using the addition operator</p>
+	<div  class="cBox">
+    <pre class="c1"><code class="language-js">
+	let firstName = "Scott";
+	let lastName = "Campbell";
+	let fullName = firstName + lastName;    //ScottCampbell
+	document.write(fullName);
+	</code></pre>
+	</div>
+
+	<div  class="cBox">
+    <pre class="c1"><code class="language-js">
+	let fullName = "Scott";
+	let lastName = "Campbell";
+	fullName += lastName;
+	document.write(fullName);    //ScottCampbell
+	</code></pre>
+	</div>
+	<div  class="cBox">
+    <pre class="c1"><code class="language-js">
+	var text = "Scott";
+	var text2 = "Campbell";
+	var text3 = "53";
+	var sentence =  text + text2 + text3;    //ScottCampbell53
+	document.write(sentence);
+	</code></pre>
+	</div>
+   <p>We will learn how to put spaces in you string later
+   </P>
+       			<h1>Comparison Operators</h1>
+       			<p>Used to compare its operands and return a boolean value Based on whether the value is 
+	   			<code class="singleCode">true</code> or <code class="singleCode">false</code>, it can be used to compare strings, numbers or object data.</p>
+    <div class="tBox">
+	     <table>
+       	 <thead>
+          <tr>
+		    <th>Name</th>
+            <th>Operator</th>
+          </tr>
+       	 </thead>
+       	 <tbody>
+          <tr>
+		    <td>Epuality operator</td>
+            <td>==</td>           
+          </tr>
+          <tr>
+		    <td>Inequality operator</td>
+            <td> != </td>            
+          </tr>
+          <tr>
+		    <td>Identity operator</td>
+            <td>===</td>           
+          </tr>
+          <tr>
+		    <td>no-identity operator</td>
+            <td>!==</td>           
+          </tr>
+          <tr>
+		    <td>Greater than operator</td>
+            <td>&gt </td>
+          </tr>
+          <tr>
+		    <td>Greater than or equal operator</td>
+            <td> &gt= </td>           
+          </tr>
+		    <td>Less than  operator</td>
+            <td>&lt </td>           
+          </tr>
+          <tr>
+		    <td>Less than or equal operator</td>
+            <td>&lt= </td>
+          </tr>
+          </tbody>
+          </table> 
+	</div>
+
+	   		<h3>Equality Operator (==)</h3>
+			<p>Will return true if operands are equal, and false if they are not equal.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	(4 == 4) + "&ltbr&gt" +           		   		   	   // returns true 
+	(6 == 4) + "&ltbr&gt" +           	  		  	     // returns false 
+	("Hello Sandra" == "Hello Sandra") + &ltbr&gt +     // returns true
+	("hello sandra" == "hello mum");           // returns false 
+	</code></pre>
+	</div>
+
+			<h3>Inequality Operator (!=)</h3>
+			<p>Returnes true if the operands are not equal, returns false if they are equal.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	(4 != 4)  + "&ltbr&gt" +				     // returns false 
+	(6 != 4)   + "&ltbr&gt" +  		   		 	   // returns true
+	("2" != 2)   + &ltbr&gt +				 	    //returnes false
+	("Hello Sandra" == "Hello Sandra") + &ltbr&gt +   // returns true 
+	("hello sandra" == "hello mum");        	  	   // returns false 
+	</code></pre>
+	</div>
+			<h3>Identity Operator (===)</h3>
+			<p>The identity operator is like a strict Equality operator, as such will return true only if the 
+			operands are of equal value and type.</p>
+			
+	<div class="cBox">
+    <pre class="c1">
+	<code class="language-js">
+	//This example will return a value of true as both operands are of equal value and type.
+	
+	document.getElementById("demo").innerHTML = (2 === 2);
+	</code></pre>
+	</div>
+	
+    <div class="cBox">
+	<pre class="c1">
+	<code class="language-js">
+	//This example will return a value of false as both operands are of equal value but not	of equal type
+	
+	
+	document.getElementById("demo").innerHTML = ("2" === 2);
+	</code></pre>		
+	</div>
+
+
+			<h3>Non-identity Operator (!==)</h3>
+			<p>The Non-identity operator is like a strict inequality operator, as such will return true only if
+			the operands are  not of equal value and/or type.</p>
+	<div class="cBox">
+	<pre class="c1">
+	<code class="language-js">
+	//This example will return a value of true as both operands are of equal value but not the same type
+	
+	 
+	document.getElementById("demo").innerHTML = ("7" !== 7);
+	</code></pre>
+	</div>
+
+	<div class="cBox">
+	<pre class="c1">
+	<code class="language-js">
+	//This example will return a value of false as both operands are of equal value and are of equal type
+	
+	
+    document.getElementById("demo").innerHTML = (9 !== 9);
+	</code></pre>
+	</div>	
+
+
+	    	<h3>Greater than Operator (&gt) </h3>
+			The greater than operator returns true if the first operand is greater in value than the second operand
+			
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = 
+	(8 &gt 4) + "&ltbr&gt" +				  	//true
+	(4 &gt 8) + "&ltbr&gt" +					//false
+	(4.56 &gt 4.54) + "&ltbr&gt" +				//true
+	(4.67 &gt 4.69);  			 				//false
+	</code></pre>
+	</div>		
+
+
+			<h3>Greater than or equal to Operator (&gt=) </h3>
+			<p>The greater than or equal  operator returns true if the first operand is greater than or equal 
+			in value to the second operand></p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = 
+	(34 &gt= 33) + "&ltbr&gt" +				  //true
+	(41 &gt= 48) + "&ltbr&gt" +				  //false
+	(4.56 &gt= 4.54) + "&ltbr&gt" +			  //true
+	(4.67 &gt= 4.69) + "&ltbr&gt" +			  //false
+	(4 &gt= 4) +  "&ltbr&gt" +	  			  //true
+	(2.67 &gt= 2.67);		 				  //true
+	</code></pre>
+	</div>		
+
+
+			<h3>Less than Operator (&lt) </h3>
+			<p>The less than operator returns true if the first operand is less in value than the second 
+			operand.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = 
+	(8 &lt 4) + "&ltbr&gt" +				  	//false
+	(4 &lt 8) + "&ltbr&gt" +					//true
+	(4.56 &lt 4.54) + "&ltbr&gt" +				//false
+	(4.67 &lt 4.69);  			 				//true
+	</code></pre>
+	</div>		
+
+
+			<h3>Less  than or equal to Operator(&lt=) </h3>
+			<p>The less than or equal operator returns true if the first operand is less or equal in value to the second 
+			operand.
+			</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML = 
+	(8 &lt= 4) + "&ltbr&gt" +				  //false
+	(4 &lt= 8) + "&ltbr&gt" +				  //true
+	(4.56 &lt= 4.54) + "&ltbr&gt" +			  //false
+	(4.67 &lt= 4.69) + "&ltbr&gt" +			  //true
+	(23 &lt= 23) + "&ltbr&gt" +	  			  //true
+	(23.67 &lt= 23.67);		  				  //true
+	</code></pre>
+	</div>		
+	
+	
+        	<h1>logical Operators</h1>
+			<p>They are used with logical values and return a boolean value,
+			</p>
+			<p>Below are the tree logical operators:</p>
+	<div class="tBox">
+			<table>
+			   <thead>
+			 <tr>
+			   <th>Name</th>
+			   <th>Operator</th>
+			   <th>Usage</th>
+			 </tr>
+			   </thead>
+			   <tbody>
+			 <tr>
+			   <td>Logical AND</td>
+			   <td>&& </td>
+			   <td>expression1 && expression2</td>           
+			 </tr>
+			 <tr>
+			   <td>Logical OR</td>
+			   <td>||</td>  
+			   <td>expression1 || expression2</td>          
+			 </tr>
+			 <tr>
+			   <td>Logical NOT</td>
+			   <td>!</td>  
+			   <td>!expression</td>         
+			 </tr>
+			 </tbody>
+			 </table> 
+	</div>
+			<h3>Logical AND ( && )</h3>
+			<p>Will return true if both expressions are true</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	(true && true) + "&ltbr&gt" +			   //true
+	(true && false) + "&ltbr&gt" +			   //false
+	(34 == 34 && 45 == 45) + "&ltbr&gt" +	   //true
+	(27 == 29 && 7 == 7) + "&ltbr&gt" +		   //false
+	(56 &gt 34 && 45 &lt 56) + "&ltbr&gt" +	   		  //true
+	(35 &gt 45 && 67 &lt 34);  			  			  //false
+	</code></pre>
+	</div>
+
+			<h4>Logical OR ( || )</h4>
+			<p>Will return true if either expressions are true</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	(true || true) + "&ltbr&gt" +			   //true
+	(true || false) + "&ltbr&gt" +			   //true
+	(false || false) + "&ltbr&gt" +			   //false
+	(34 == 34 || 45 == 47) + "&ltbr&gt" +	   //true
+	(27 == 29 || 7 == 17) + "&ltbr&gt" +	   //false
+	(56 &gt 34 || 45 &lt 56) + "&ltbr&gt" +	   //true
+	(45 &lt 35 || 34 &gt 67);  			  	   //false
+	</code></pre>
+	</div>	
+
+
+	<h3>Logical NOT( ! )</h3>
+			<p>Will return true if either expressions are not true</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	document.getElementById("demo").innerHTML =
+	!(true) + "&ltbr&gt" +					   //false
+	!(false) + "&ltbr&gt" +					   //true
+	!(34 == 34) + "&ltbr&gt" +				   //false
+	!(27 &gt 29); 			 				    //true
+	</code></pre>
+		
+	</div>	
+			<h3>Logical operators with Conditional statements</h3>
+			<p>Logical operators are usually used with conditional statements, below is an example with an if statement</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	if (33 == 33 && 44 == 44){   			  //if 33 = 33 = true  and 44 = 44 = true then condition is true
+	alert("The condition is true")
+	}
+	</code></pre>
+
+	<pre class="c1"><code class="language-js">
+	if  (33 == 33 && 33 == 44){				  	//if 33 = 33 = true and 33 = 44 = false then condition is false
+	alert("The condition is false, alert will not show")
+	}
+	</code></pre>
+		</div>
+				<h3>Conditional (Ternary) Operators</h3>
+				<p>The ternary operator takes three operands, If the condition is true it will return
+				<code>Value1</code> if not will return <code>value2.</code>
+				<br>
+				<br>
+				<code class="singleCode">(condition) ? "value1" : "value2";</code>
+				</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	let testScore = 80;												//Change the testScore to 65 and check result
+	let testResult = (testScore > 75) ? "passed" : "failed";
+	document.getElementById("demo").innerHTML = testResult;			
+	</code></pre>
+	</div>
+				<p>Because the <code>testScore</code> was over 75 it returned the passed value to the 
+				<code>testResult</code> 
+				variable.</p>
+</div> <!--box 7 ends-->
+
+
+
+
+<div class="container"><!--box 8 starts-->
+				<h1>Functions</h1>
+                <p>The function is one of the fundamental building blocks of javascript, </p><br>
+					<ul>
+						<li>A function is a javascript method.</li>
+						<li>It is a set of statements that will perform a task or output a value</li>
+						<li>It is executed when it is <code>invoked</code> (called) by something.</li>
+					</ul> 
+				<h3>Function definition</h3>
+				<br>
+			        <ul>
+						<li>A function is declared using the <code>function</code> keyword.</li>
+						<li>Then the name of the function. <code>myFunc</code></li>
+						<li>A list of ( optional) parameters wrapped in parentheses <code>(Parameter1, parameter2)</code></li>
+					    <li>A block of codes or statements inclosed in curly braces <code>{ var  x = 23;}</code></li>
+					</ul>
+		<div class="cBox">
+					<pre class="c1">
+						<code class="language-js">
+							
+							function myFunc(parameter1, parameter2){ 
+																Code to be executed
+																}
+						</code>
+					</pre>
+		</div>
+					
+					<p>In the example below the function creates a variable  <code>str</code>,  gives it a value of 
+					Hello World! and prints it to demo. but only when envoked (called) </p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	/*defining a function*/
+
+	function writeText(){
+	let str = "Hello World!"
+	document.getElementById("demo").innerHTML = str; 
+	}   
+	
+	</code></pre></div>
+	                 <p>The example below adds the value of two numbers, then prints to demo.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	function addNumbers(num1, num2){
+	let sum = num1 + num2;
+	document.getElementById("demo").innerHTML = sum;  }
+	
+	// call you function
+	addNumbers(5, 6);
+	</code></pre>	
+	</div>
+				<h43Calling a function</h3>
+				<p>A function will only be executed when invoked (called), you can call a function
+					 inside a javascript program like the last example, a function can also be called
+					  by an event, commonly a button,</p>
+    <div class="cBox">
+	<pre class="c1"><code class="language-js">
+	/*javascript code*/
+                
+	function addNumbers(num1, num2, num3, num4){
+	let sum = num1 + num2 + num3 + num4;
+	document.getElementById("demo").innerHTML = sum;
+	}
+	/*html code*/
+				
+	&ltp id="demo"&gt Sum will be printed hear&lt/p&gt
+	&ltbutton type="button" onclick="addNumbers(2, 3, 1, 4)"&gtValue&lt/button&gt
+	</code></pre></div>
+
+            <h3>The return Statement</h3>
+			<p>The <code>return</code> statement is used to stop its execution and return a value to 
+			the function caller, The <code class="singleCode">addNumbers()</code> function below returns the sum of its
+			 argument to the function caller, and is then printed to an element by the function caller.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	function addNumbers(num1, num2, num3, num4, num5){
+
+	let sum = num1 + num2 + num3 + num4 + num5;
+	return sum;
+	}
+
+	document.getElementById("demo").innerHTML = addNumbers(2, 2, 2, 1, 10);
+	</code></pre> 
+		</div>
+
+
+			<p>This example returns a value to a variable, them uses the variable in a statement.</p>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	function getFullName(firstName, lastName){
+	return firstName + " " + lastName;
+	}
+	let fullName = getFullName("Scott", "Campbell");
+	document.getElementById("demo").innerHTML = fullName;
+	</code></pre> </div>		
+
+            <h3>function scope</h3>
+			<p>Variables declared inside a function are called  <code class="singleCode">Local variables</code>  and can only
+			be used inside the function where it was declared,  <code class="singleCode">Global variables</code>  can be used by any function
+			as they are declared outside the function.
+	        </p>
+			<h3>Local variable</h3>
+			<p>In the example below Nothing will be printed in demo because the local variable cannot be used outside the function
+			it was declared in.</p>
+	<div class="cBox">
+	 <pre class="c1"><code class="language-js">
+	function getAge(age){
+	let fullName = "Sandra Mctaggart";
+
+	//fullName variable can be used here
+	document.getElementById("demo").innerHTML =
+	fullName + " is " + age + " Years old."
+	}
+	   //The fullName variable cnnot be used here
+	document.getElementById("demo1").innerHTML = fullName;
+			
+	//Add this to your html sheet
+	&ltp id="demo"&gt demo &lt/p&gt
+		&ltp id="demo1"&gt demo1 Nothing will print here&lt/p&gt
+	&ltbutton type="button" onclick="getAge(19)"&gtValue&lt/button&gt
+	</code></pre>
+	</div>
+
+
+			<h3>Global variable</h3>
+			<p>Global variables can be used by any function, because they are declared outside a function.</p>
+	<div class="cBox">
+    <pre class="c1"><code class="language-js">
+	let fruit = "apple"; // this must go to the top of your script file (before all other code)
+
+	function myFunc(){
+	document.getElementById("demo").innerHTML =
+	"My Favorite Fruit is " + fruit;
+	}
+	</code></pre>
+	</div>
+			<p>Instead of writing the same code over and over again we can reuse the same code many times.
+			</p>
+			<P>The function below converts <code>Kilometers to Miles</code> and can be used again.</P>
+	<div class="cBox">
+	<pre class="c1"><code class="language-js">
+	function toMiles(kilometer) {
+	let miles = kilometer * 0.62137;
+	return kilometer + " kilometer/s " + "equals " + miles + "miles.";
+	}
+
+	alert(toMiles(3));
+	document.getElementById("demo").innerHTML = toMiles(10);
+	</code></pre>
+	</div>
+
+</div><!--box 8 ends-->
+
+
+<div class="container"><!--box 9 starts-->
+			<h1>Objects</h1>
+			<p>An object is a collection of related data and/or functionality, We start an object by first declaring
+				a variable Then add properties, Each property has a <code>name (eg: make, model)</code> and a 
+				<code>value (eg: ford, escort)</code> and are separated by a colon (:). Properties are separated by a 
+				comma(,)
+			</p>
+    <div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let person = {		  					  	  	  	  		//Data Type
+				   fullName: "Scott Campbell",						 //string
+				   age: 53,  		 								 //number
+				   hobbies: ["coding", "music", "gaming"],			 //array
+				   isMarried: true				 					 //boolean
+				   }	
+		</code></pre>
+	</div>
+	        <h3>Methods in an object</h3>
+	        <p>Object's can also contain <code>functions</code> (methods).</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let pets = {
+				   dog: "sasha",
+				   cat: "cheeky",
+   	 			   rabbit: "thumper",
+				   parrot: "polly",
+				   showDog: function(){
+				   			alert(this.dog);
+									  },
+				   showCat: function(){
+				  		   alert(this.cat);
+						              }
+					}
+					 // call an objects function
+						   pets.showDog();
+						   pets.showCat();
+		</code></pre>
+	</div>
+			<h3>Accessing object's Properties</h3>
+			<p>There are two ways to access an object's properties and methods
+			</p>
+			<h4>The Dot Notation</h4>
+			<p>Here we use a dot(.) to access an object's members</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let pets = {
+				 dog: "sasha",
+				 cat: "cheeky",
+				 rabbit: "thumper",
+				 parrot: "polly"
+				 }; 
+
+		document.getElementById("demo").innerHTML =
+												   pets.dog + "&ltbr&gt" +
+												   pets.cat + "&ltbr&gt" +
+												   pets.rabbit + "&ltbr&gt" +
+												   pets.parrot;
+		</code></pre>	
+	</div>
+			<h3>The Bracket Notation</h3>
+			<p>Here we use a square [ ] brackets to access an object's members</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let person = {
+		first: "Scott",
+		last: "Campbell",
+		middle: "Wilson",
+		family: "Howarth"
+		}; 
+		
+		document.getElementById("demo").innerHTML =
+												  person["first"] + "&ltbr&gt" +
+												  person["last"] + "&ltbr&gt" +
+												  person["middle"] + "&ltbr&gt" +
+												  person["family"]; 	
+		</code></pre>
+	</div>
+			<h3>An object in an object</h3>
+			<p>You can put an object in another object</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let car = {
+				  ford: {
+				  		model: "escort",
+						size : "1.6L",
+						color: "red" 
+						},
+				  fiat: {
+				  		model: "panda",
+						size: "1.2L",
+						color: "blue"
+						}
+						}
+
+		document.getElementById("demo").innerHTML = car.ford.color;
+		</code></pre>
+	</div>
+</div><!-- box 9 ends-->
+
+
+
+
+
+<div class="container"><!--box 10 starts-->
+			<h1>Javascript string</h1>
+			<p>A string is a text enclosed in either single or double quotes
+			use double quotes if your string contains single quotes and vice versa.	<br>
+	
+	<div class="cBox">
+		 <pre class="c1"><code class="language-js">
+		let str1 = "We'll be first";
+		let str2 = "Her name is 'Sandra'";
+		let str3 = 'his name is "Scott"';
+
+
+		document.getElementById("demo").innerHTML =
+		str1 + "&ltbr&gt" +
+		str2 + "&ltbr&gt" +
+		str3 ;		  
+	 	</code></pre>
+	</div>
+			<h3>Concatenation Strings</h3>
+			<p>To add strings together, use the addition operator(+).</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str1 = "Do You";
+		let str2 = "like my";				//(" ") represents a space, ("") does not
+		let str3 = "new car";
+		let sentence = str1 + " " + str2 + "" + str3;
+			
+		document.getElementById("demo").innerHTML = sentence;
+		</code></pre>
+	</div>
+			<p>We will create a little program to greet a user and use there input to make a sentence</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		function greetUser(){
+		let userName = window.prompt("Hello, Welcome to my tutorial. may i know your name?");
+		let sent = "Nice to meet you " + " " +  userName + "! " + " I hope you are enjoying the lessons";
+
+		alert(sent);
+		}
+		 			//call your function
+		 				 greetUser();
+		</code></pre>
+	</div>
+	        <h3>Escaping Characters</h3>
+			<p>To escape characters we use a backslash(\) right before the character.</p>
+	<div class="cBox"> 
+		<pre class="c1"><code class="language-js">
+		let esca1 = "She is called \"Sandra\"";
+		let esca2 = 'He is called \'Scott\'';
+		let esca3 = "Escaping backslash \\";
+
+		document.getElementById("demo").innerHTML =
+		esca1 + "&ltbr&gt" +
+		esca2 + "&ltbr&gt" +
+		esca3;
+		</code></pre>
+	</div>
+			<h1>String Methods</h1>
+			<p>Let move on and try some useful things that we can do with strings.</p>
+			<p>Everything in javascript is an <code>Object</code>, When you create a string it's variable becomes a
+			<code>String Object Instance</code>, and many properties and Methods are available to it.</p>
+			<h4>Getting String Length</h4>
+			<p>To get the length of a string we use the <code>.length</code> property.</p>
+	<div class="cBox">
+		 <pre class="c1"><code class="language-js">
+		let str = "Hello Mum";
+		let strlen = str.length;
+
+		document.write(strlen);
+		</code></pre>
+	</div>
+			<h3>Retrieving a character</h3>
+			<p>We can retrieve a character from a string using the square brackets notation([]).</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "Hello Dad!";
+		let y = str[4];
+
+
+		document.write(y); // prints o
+		</code></pre>
+	</div>
+			<p>You may have expected <code class="singleCode">str[4]</code> would output the fourth character ("l"),
+			But instead it returned the fifth character witch if ("o"), that's because javascript
+			counts from 0 not from 1, That means 0 represents the first character and 1 represents the second
+			and so on. This is called the <code>index[4]</code>.</p>
+
+			<h3>Finding a substring in a string</h3>
+			<p>Sometimes you need to find if a substring is present in a string, this can be done using the <code class="singleCode">indexOf()</code>
+			Method. It returns the <code>index</code>of the first occurrence of the substring. The method <code class="singleCode">lastIndexOf</code>
+			returns the <code>index</code> of the last occurrence of a substring in a string.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "What are they, Where are they";
+		let strpos = str.indexOf("they");   	   // returns 9
+		let strpos1 = str.lastIndexOf("they"); 	    // returns 25
+	
+		document.getElementById("demo").innerHTML =
+		strpos + "&ltbr&gt" +
+		strpos1;
+		</code></pre>
+	</div>
+			<p>Both the <code class="singleCode">indexOf()</code> and <code class="singleCode">lastIndexOf()</code> return -1 if no substring is present.</p>
+
+
+			<h3>The search() Method</h3>
+			<p>This work similarly to the <code class="singleCode">indexOf()</code> and returns the <code>index</code> of the first occurrence
+			of a text in a string. And it can take regular expressions as a parameter which <code class="singleCode">indexOf()</code>  cannot.(we will laern about 
+			regular expressions later)</p>
+	<div class="cBox">
+			<pre class="c1"><code class="language-js">
+		let str = "What are they, Where are they";
+		let strpos = str.search("they");   		  // returns 9
+			
+		document.getElementById("demo").innerHTML = strpos;
+		</code></pre>
+	</div>
+
+
+
+
+
+
+			<h3>Extracting a String</h3>
+			<p>We can extract a substring from a string using the following methods: 
+
+			</p>
+	<div class="cBox">
+			<code>
+			<ul>
+				<li>slice(start, end)</li>
+				<li>substring(start, end)</li>
+				<li>substr(start, length)</li>
+			</ul>
+			</code>
+			
+    </div> 
+			<h4>The slice() Method</h4>
+			<p>The <code>slice()</code> method extracts a section of a string and returns it as a new string, 
+			It takes two numerical parameters: starts <code>index</code>, and the end <code>index.</code> It 
+			can also take a negative value which starts counting from the end of the string.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str1 = "The slow Dragon was killed by the knight.";
+		let str2 = "The slow knight was killed by the Dragon";
+		let result1 = str1.slice(9, 19); 		 //returns Dragon was
+		let result2 = str2.slice(-9, -1);  			//returns the Dragon
+			
+		document.getElementById("demo").innerHTML =
+		result1 + "&ltbr&gt" +
+		result2;
+		</code></pre>
+	</div>
+
+
+			<h4>The <code>substring() Method</code></h4>
+			<p>This works exactly the same as <code>slice()</code> Method, but cannot take a negative value.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "The slow Dragon was killed by the knight.";
+		let result = str.substring(9, 19); 			 //returns Dragon was
+
+		document.getElementById("demo").innerHTML = result;
+		</code></pre>
+	</div>
+
+            <h3>Replacing string inside a string</h3>
+			<p>The <code class="singleCode">replace() </code> method replaces the specified text inside and returns a new string. It takes two parameters:
+				 The string to replace, and the replacment string.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "The slow knight was killed by the slow Dragon";
+		let result = str.replace("slow", "stupid");				//returns "The stupid knight was killed by the slow Dragon"
+
+		document.getElementById("demo").innerHTML = result;
+		</code></pre>
+	</div>
+			<p>Did you notice it only change the first occurrence of slow. to replace all matching strings use the <code>/g</code>
+			flag. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "The slow knight was killed by the slow Dragon";
+		let  result = str.replace(/slow/g, "stupid");			//	//returns "The stupid knight was killed by the stupid Dragon"
+		   
+		document.getElementById("demo").innerHTML = result;
+		</code></pre>
+	</div>
+			<p>The <code class="singleCode">replace()</code> method is case sensitive, To replace text insensitively, use the <code>/i</code> flag 
+			combined with the <code>/g</code> flag.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "my car is cool, I love my Car!";
+		let result = str.replace(/CaR/gi, "Wife");		//returns my Wife is cool, I love my Wife
+
+		document.getElementById("demo").innerHTML = result;
+		</code></pre>
+	</div>
+			<h3>Trimming a string</h3>
+			<p>This will remove any white space from both end of a string.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str = "         my car is cool       ";
+		let result = str.trim();
+
+		document.getElementById("demo56").innerHTML = result;
+		</code></pre>
+	</div>
+			<h3>Converting to upper and lower case</h3>
+			<p>This will covert the string <code class="singleCode">toUpperCase()</code>or <code  class="singleCode">toLowerCase()</code> case.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str1 = "my car is cool";
+		let str2 = "MY CAR is cool";
+		let result1 = str1.toUpperCase();			//MY CAR IS COOL
+		let result2 = str2.toLowerCase();  			//my car is cool
+				
+		document.getElementById("demo").innerHTML = 
+		result1 + "&ltbr&gt" + result2;
+		</code></pre>
+	</div>
+
+			<h4>The <code>concat()</code> Method</h4>
+			<p>This adds the string argument to the function calling string without modifying the original string.<br>
+			Instead of just a whitespace separating the string you can add characters like a Dash(-)</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let str ="Lorem";
+		result = str.concat(" ", "ipsum");			//Lorem ipsum
+		result2 = str.concat("-", "ipsum");			//Lorum-ipsum
+		
+		document.getElementById("demo").innerHTML = result + "&ltbr&gt" + result2;
+		</code></pre>
+	</div>
+
+</div> <!--box 10 ends-->
+
+
+
+
+<div class="container"> <!--box 11 starts-->
+				<h1>Numbers</h1>
+				<p>There are two types of numbers in javascript:</p>
+				<ul>
+					<li><code>Integer</code>-Numbers without decimal points.</li>
+					<li><code>Floating point</code>-Numbers with decimal points.</li>
+				</ul>
+ 	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = 2;     // an integer
+		var num2 = 2.14;   // a floating point
+
+		document,getElementById("demo59").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2;    	
+		</code></pre>
+ 	</div>
+	 			<h4>Extra large or small numbers</h4>
+				<p>Large and small numbers can be written using <code>exponent-notation</code>.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = 21236;   //or 212000000    
+		var num2 = 212e-6;  //or .000212 
+				
+		document,getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2;    	
+		</code></pre>
+	</div>
+
+				<h4>String as numbers</h4>
+				<p>Javascript will convert <code>numbers</code> if its posible.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var difference = "10" - "12";    //returns 8
+		var product = "10" * "2";   //returns 20
+		var quotient = "10"	/ "2";   //returns 5	
+				
+		document.getElementById("demo").innerHTML =
+		difference + "&ltbr&gt" +
+		product +  "&ltbr&gt" +
+		quotient;
+		</code></pre>
+	</div>
+				<p>Adding numbers as strings does not work with the <code>+</code> operator, This will
+					concatenate them as a string.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var sum = "10" + "2";    // returns 102	and not 12
+					
+		document.getElementById("demo").innerHTML = sum;
+		</code></pre>
+	</div>
+
+				<h4>Performing operations on strings and numbers</h4>
+				<p>Javascript will convert numbers if its posible, This time we will use 
+					one <code>string</code> and one <code>number</code>.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var difference = "10" - 2;    / /returns 8
+		var product = 10 * "2";   // returns 20
+		var quotient = "10"	/ 2;   // returns 5	
+	
+		document.getElementById("demo").innerHTML =
+		difference + "&ltbr&gt" +
+		product +  "&ltbr&gt" +
+		quotient;
+		</code></pre>
+	</div>
+				<p>The reason the example above worked, is that javascript was able to convert
+					<code>strings</code> to <code>numbers</code>, but will still not work with the <code>+</code> operator.
+				</p>
+				<h4>Hexidecimal Numbers</h4>
+				<p>This uses a leading <code>0</code> followed by a letter <code>x</code>, Then a character inside 
+				the range of <code>(0123456789ABCDEF)</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = 0xA;    / /returns 10
+		var num2 = 0xff;   // returns 255
+		var num3 = 0x123456789ABCDEF;   // returns 81985529216486900	
+		
+		document.getElementById("demo").innerHTML =
+		num3 + "&ltbr&gt" +
+		num2 +  "&ltbr&gt" +
+		num3;
+		</code></pre>
+	</div>
+
+				<h4><code>NaN</code>-Not a Numbers</h4>
+				<p><code>NaN</code> means not a number. it's a property that represents an illegal number.
+				using non-numeric data will return <code>NaN</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var sum1 = 10 / "5";    //returns 2
+		var sum2 = 10 / "coding";   // returns NaN
+						
+		document.getElementById("demo").innerHTML =
+		sum1 + "&ltbr&gt" +
+		sum2;
+		</code></pre>
+	</div>
+				<h1>Number Methods</h1>
+
+				<h4><code>isNaN()</code> Method</h4>
+				<p><code>isNaN()</code>  Method returns <code>true</code> if its argument is not a legal <code>number</code>,
+				otherwise it returns <code>false.</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = isNaN(5);    // returns false
+		var num2 = isNaN("5");   // returns false
+		var num3 = isNaN("Hello Mum!");  // returns testResult		
+		var num4 = isNaN("five");  // returns testResult
+
+		document.getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3 + "&ltbr&gt" +
+		num4;
+		</code></pre>
+	</div>
+				
+				<h4><code>number.isInteger()</code> Method</h4>
+				<p><code>isInteger()</code>  Method returns <code>true</code> if the passed argument(value) is an <code>integer</code>,
+				otherwise it returns <code>false.</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = Number.isInteger(21);    // returns true
+		var num2 = Number.isInteger(5.34);   // returns false
+		var num3 = Number.isInteger("Hello");  // returns false		
+
+		document.getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3;
+				
+		</code></pre>
+	</div>
+
+
+				<h4><code>parseInt()</code> Method</h4>
+				<p><code>parseInt()</code>  Method takes a string value and returns an integer based on that 
+				value.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = parseInt("21");    // returns 21
+		var num2 = parseInt("5.34");   // returns 5
+		var num3 = parseInt("5 Weeks");  // returns 5
+		var num4 = parseInt("6 weeks and 21 days");  // returns 6
+		var num5 = parseInt("weeks 4");        // returns NaN
+		var num6 = parseInt("I love my car!");   // returns NaN		
+	
+		document.getElementById("demo68").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3 + "&ltbr&gt" +
+		num4 + "&ltbr&gt" +
+		num5 + "&ltbr&gt" +
+		num6;
+	
+		</code></pre>
+	</div>
+
+
+				<h4><code>parseFloat()</code> Method</h4>
+				<p><code>parseFloat()</code>  Method takes a string value and returns an floating point
+					number based on that  value.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = parseFloat("25.546");    // returns 25.546
+		var num2 = parseFloat("5.34");   // returns 5.34
+		var num3 = parseFloat("5.6 Weeks");  // returns 5.6
+		var num4 = parseFloat("6.4 weeks and 21 days");  // returns 6.4
+		var num5 = parseFloat("weeks 4.12");        // returns NaN
+		var num6 = parseFloat("I love my car!");   // returns NaN		
+
+		document.getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3 + "&ltbr&gt" +
+		num4 + "&ltbr&gt" +
+		num5;
+	
+		</code></pre>
+	</div>
+
+				<h4><code>toFixed()</code> Method</h4>
+				<p><code>toFixed()</code>  Method returns a string with a specified number of decimals.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = (21.123456).toFixed(1);    // returns 21.1
+		var num2 = (21.123456).toFixed(2);   // returns 21.12
+		var num3 = (21.123456).toFixed(3);  // returns 21.123
+	
+		document.getElementById("demo70").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3;
+	
+		</code></pre>
+	</div>
+
+	<h4><code>toExponential()</code> Method</h4>
+				<p><code>toExponential()</code>  Method returns a string in exponential notation based on the given
+					floating point number.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = (21.123456).toExponential(1);    // returns 2.1e+1
+		var num2 = (21.123456).toExponential(2);   // returns 2.11e+1
+		var num3 = (21.123456).toExponential(3);  // returns 2.112e+1
+	
+		document.getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3;
+	
+		</code></pre>
+	</div>
+
+				<h4><code>String()</code> Method</h4>
+				<p><code>toString()</code>  Method returns a string  based on the specified number.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var num1 = (21).toString();    // returns "21"
+		var num2 = (2.12).toString();   // returns "2.12"
+		var num3 = (2112).toString();  // returns "2112"
+	
+		document.getElementById("demo").innerHTML =
+		num1 + "&ltbr&gt" +
+		num2 + "&ltbr&gt" +
+		num3;
+	
+		</code></pre>
+	</div>
+				<h4><code>NUMBER</code> properties</h4>
+				<p>The <code>NUMBER</code> object also contains the following properties:</p>
+
+
+
+	<div class="tBox">
+				<table>
+				   <thead>
+				 <tr>
+				   <th>Property</th>
+				   <th>Description</th>
+				   <th>Constant Value</th>
+				 </tr>
+				   </thead>
+				   <tbody>
+				 <tr>
+		 		  <td><code>NUMBER.MIN_VALUE</code></td>
+		 		  <td>The smallest positive  representable number in javascript </td>  
+		 		  <td>5e-324</td>        
+				 </tr>
+				 <tr>
+				   <td>NUMBER.MIN_VALUE</td>
+				   <td>The largest positive representable number in javascript</td>  
+				   <td>1.7976931348613257e+308</td>           
+				 </tr>
+				 <tr>
+		 		  <td>NUMBER.NaN</td>
+				   <td>Special "Not-A-Number" Value</td>      
+				   <td>NaN</td>     
+		 		</tr>
+				 <tr>
+				   <td>NUMBER.MIN_SAFE_INTEGER</td>
+				   <td>The minimum safe integer in javascript</td>
+		 		  <td>-9007199254740991</td>           
+		 		</tr>
+		 		<tr>
+		 		  <td>NUMBER.MAX_SAFE_INTEGER</td>
+		 		  <td>The Maximum safe integer in java script</td>
+				   <td>9007199254740991</td>
+			 </tr>
+				</tbody>
+		 	</table> 
+   	</div>
+
+</div> <!--box 11 ends-->
+
+
+<div class="container"><!--box 12 starts-->
+			<h1>Arrays</h1>
+			<p>An array is a list style <code>object</code>, They can hold multiple types of data.<br>
+			To create an array we use the square brackets ([]) or the <code>Array()</code> constructor 
+			and sperate data with a comma(,).</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk"];
+		var musicFormat2 =new array("vinyl", "cd", "tape", "minidisk");
+
+		document.getElementById("demo").innerHTML = 
+		musicFormat + "&ltbr&gt" +
+		musicFormat2;				
+		</code></pre>
+	</div>
+			<h4>Access an Array item</h4>
+			<p>We use the array index number to access the data, remember arrays are zero-indexed,
+			This means the count starts from 0 not from 1. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk"];
+		
+		document.getElementById("demo").innerHTML = musicFormat[2]; 			
+		</code></pre>
+	</div>
+			<h4>Add items to an Array</h4>
+			<p>The <code>push()</code> method adds one or more items to the end of an Array. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk"];
+		musicFormat.push("Digital");
+
+		document.getElementById("demo").innerHTML = musicFormat;			
+		</code></pre>
+	</div>
+			<p>The <code>unshift()</code> method adds one or more items to the front of an Array. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk"];
+		musicFormat.unshift("Digital");
+
+		document.getElementById("demo").innerHTML = musicFormat;			
+		</code></pre>
+	</div>
+			<h4>Remove items from an Array</h4>
+			<p>The <code>shift()</code> method removes the first element and <code>pop()</code> removes the 
+			last element.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+		musicFormat.shift();
+		musicFormat.pop();
+		
+		document.getElementById("demo").innerHTML = musicFormat;			
+		</code></pre>
+	</div>
+			<h4>Get the length of an Array</h4>
+			<p>The <code>length</code> method returns the number of element of an Array.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+
+		document.getElementById("demo").innerHTML = musicFormat.length;			
+		</code></pre>
+	</div>
+			<h4>Access the last item</h4>
+			<p>To access the last item of an Array, deduct 1 from its <code>length</code>.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+		var lastItem = musicFormat[musicFormat.length - 1];
+
+		document.getElementById("demo").innerHTML = lastItem;			
+		</code></pre>
+	</div>
+
+			<h4>Loop over an array</h4>
+			<p>Looping over an Array means to access each individual piece of data.<br>
+			We will use the <code>for</code> loop to loop our Array, We will learn loops later so 
+		don't worry if you don't understand the code.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+			
+		for(var i = 0; i < musicFormat.length; i++) {
+			document.getElementById("demo").innerHTML += musicFormat[i] + "&ltbr&gt";
+		}
+
+		// returns
+		vinyl
+		cd 
+		tape
+		minidisk
+		Digital
+		</code></pre>
+	</div>		
+			<p>Did you notice the <code>addition assignment (+=) </code> operator in the <code>innerHTML</code> property,
+			This stops the printed elements from being overwritten.</p>
+
+
+			<h4>Arrays are Objects</h4>
+			<p>The data type of an Array is <code>object</code>, We can use the <code>typeof</code> operator to 
+			show the data type of an Array, </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+		var type = typeof musicFormat;  //returns "object"
+
+		document.getElementById("demo").innerHTML = type;
+		</code></pre>
+	</div>			
+
+			<h1>Array Methods</h1>
+			<p>Hear we will learn the most useful <code>Array</code> Methods.</p>
+			<h4><code>forEach()</code></h4>
+			<p>The <code>forEach()</code> method  executes a <strong>callback function</strong> for each element in 
+			an Array,and is another way to loop over an Array. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+		musicFormat.forEach(function(val, i, arr){
+		document.getElementById("demo").innerHTML = i + ": " + val + "&ltbr&gt";
+		});
+		</code></pre>
+	</div>		
+			<p>The callback function is envoked(Called) with 3 arguments:<br>
+			<ol>
+				<li>The <code>Value</code> of the element <code>(val,)</code></li>
+				<li>The <code>index</code> of the element <code>(i,)</code></li>
+				<li>The <code>Array</code> itself (arr).</li>
+			</ol></p>
+			
+			<h4><code>join()</code></h4>
+			<p>The <code >join()</code> method will create and return a new string , it dose this by 
+			combining all elements of your Array, The elements will be split with a specified character,
+			If no character is specified commas are used (,). You can use any character you want.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =["vinyl", "cd", "tape", "minidisk","Digital"];
+		var str = musicFormat.join("_");
+
+		document.getElementById("demo").innerHTML = str;
+		</code></pre>
+	</div>		
+			<h4><code>split()</code></h4>
+			<p>You can convert a <code>string</code> to an <code>Array</code> using the <code>split()</code> method,
+			This takes a <code>separator</code> string as its argument and splits the string at the <code class="language-js">separator</code> point.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var string = "vinyl-cd-tape-minidisk-Digital";
+		var arr = string.split("-");     //This sets the split point(-) 
+
+		document.getElementById("demo").innerHTML = typeof arr + ": " + arr;
+		</code></pre>
+	</div>	
+			<h4><code>concat()</code></h4>
+			<p>You can use the <code>concat()</code> method to merge two or more Arrays, To concatenate more than
+			two Arrays separate the Arrays with commas, This will not modify the original Array, it will create 
+			and return a new one.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicFormat =[" vinyl", " cd", " tape", " minidisk", " digital"];
+		var musicType = [" rock", " pop", " metal", " blues", " jazz"];
+		var musicBands = [" pink Floyd"," iron maiden", " oasis", " Roger waters", " the kinks"];
+	
+		var arr = musicFormat.concat(musicType, musicBands);
+		document.getElementById("demo").innerHTML = arr;
+		</code></pre>
+	</div>	
+			
+			<h4><code>indexof()</code></h4>
+			<p>The <code>indexof()</code> method will return the <code>index</code> of the first occurrence of 
+			an element in an Array. Remember Arrays strt from 0.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicBands = ["pink Floyd","iron maiden","oasis","Roger waters","the kinks","oasis"];
+
+		var i = musicBands.indexOf("oasis");  //returns 2
+		document.getElementById("demo").innerHTML = i;
+		</code></pre>
+	</div>	
+
+			<h4><code>lastIndexof()</code></h4>
+			<p>The <code>lastIndexof()</code> method will return the  <code>index</code> of the last occurrence of 
+			an element in an Array.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicBands = ["pink Floyd","iron maiden","oasis","Roger waters","the kinks" ,"oasis"];
+
+		var i = musicBands.lastIndexOf("oasis");  //returns 5
+		document.getElementById("demo").innerHTML = i;
+		</code></pre>
+	</div>	
+			<p>The <code class="language-js">lastIndexof()</code> and <code>indexof()</code> method  will return the  <code class="language-js">-1</code> 
+			if the element is not found in an Array.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicBands = ["pink Floyd","iron maiden","oasis","Roger waters","the kinks" ,"oasis"];
+
+		var firstIndex = musicBands.indexOf("Cher");  //returns -1
+		var lastIndex = musicBands.lastIndexOf("cher"); // returns -1
+
+		document.getElementById("demo").innerHTML = i
+		firstIndex + "&ltbr&gt" +
+		lastIndex;
+		</code></pre>
+	</div>	
+
+				<h4><code>includes()</code></h4>
+				<p>The <code>includes()</code> method will check if an element exists in an Array. and returns <code>true</code>
+				if none is found will return <code>false</code>.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicBands = ["pink Floyd","iron maiden","oasis","Roger waters","the kinks" ,"oasis"];
+
+		var test1 = musicBands.includes("cher");  //returns false
+		var test2 = musicBands.includes("the kinks");  //returns true
+		document.getElementById("demo").innerHTML = 
+		test1 + "&ltbr&gt" +
+		test2;
+		</code></pre>
+	</div>	
+
+			<h4><code>slice()</code></h4>
+			<p>The <code>slice()</code> method returns a copy of a specified section of an Array,<br>
+			It takes two arguments:
+			<ol>
+				<li><code>begin</code>- The index to start extraction from.</li>
+				<li><code>end</code>- The next index after the last extraction index.</li>
+			</ol></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var musicBands = ["pink Floyd","iron maiden","oasis","Roger waters","the kinks" ,"oasis"];
+
+		var arr = musicBands.slice(0, 2);  //returns ["pink Floyd", "iron maiden"]
+		document.getElementById("demo").innerHTML = arr;
+		</code></pre>
+	</div>	
+
+			<h4><code>splice()</code></h4>
+			<p>The <code>splice()</code> method changes the content of an Array by adding new elements or removing/replacing<br> 
+			existing elements,It takes three or more arguments:
+			<ol>
+				<li><code>start</code>- The index to start change.</li>
+				<li><code>delteCount</code>- The number of elements to replace.</li>
+				<li><code>element1, element2,...</code>-elements to add to Array.</li>
+			</ol></p>
+		<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var days = ["Monday","Thursday","Friday","Saturday","Sunday"];
+
+		days.splice(1, 0, "Tuesday", "Wednesday");  //adds Tuesday, Wednesday to array
+		document.getElementById("demo").innerHTML = days;
+		</code></pre>
+	</div>	
+			<p><code class="language-js">splice()</code> method can also be used to remove an item/s from an Array, To do This
+			just omit the third argument.<br>
+			To remove a single item, Specifies the <code>index</code> you want to remove and write <code>1</code> for the 
+			second argument. </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var days = ["Monday","Thursday","Friday","Saturday","Sunday"];
+		
+		days.splice(1, 1, );  // removes Thursday
+		document.getElementById("demo").innerHTML = days;
+		</code></pre>
+	</div>
+			<p>To remove multiple items from an Array, set <code>index</code> as first argument and then the 
+			number of items you want to remove as the second argument.</p>
+	<div class="cBox">
+		<pre class="c1"><code  class="language-js">
+		var days = ["Monday","Thursday","Friday","Saturday","Sunday"];
+				
+		days.splice(1, 2, );  // removes Thursday and Friday
+		document.getElementById("demo").innerHTML = days;
+						
+		</code></pre>
+	</div>
+			<h4>Replacing an items Value</h4>
+			<p>An easier way to replace an items value, is by accessing the item and assigning a new value.
+			Just use its <code>index</code>, the example below replaces <code>Monday</code> with 
+			<code>Wednesday</code>.
+			</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var days = ["Monday","Thursday","Friday","Saturday","Sunday"];
+						
+		days[0] = "Wednesday";  
+		document.getElementById("demo").innerHTML = days;
+		</code></pre>
+	</div>
+			<h1>Array Sorting</h1>
+			<p>Hear we will learn to sort Arrays using <code>Array</code> methods.
+			</p>
+			<h4><code>sort()</code></h4>
+			<P>The <code>sort()</code> method Sorts the Array in its default <strong>Ascending</strong> order
+			Or alphabetical if a string.</P>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var days = ["Monday", "Tuesday", "Wednesday", Thursday", "Friday", "Saturday", "Sunday"];
+								
+		days.sort();  
+		document.getElementById("demo").innerHTML = days;
+		</code></pre>
+	</div>
+			<h1>The compare Function</h1>
+			<p>The <code class="language-js">sort()</code> method takes one argument, a <code>compare function</code>, which 
+				defines the sort order.<br>
+			The <code >compareFunction()</code> comes with only two argument <code>a</code> and <code>b</code></p>
+			<p>If <code >a</code> and <code>b</code> are two elements  being compared them:<br>
+			<ul>
+				<li>If <code>compairFunction(a, b)</code> returns less than 0, <code>a</code> comes first</li>
+				<li>If  <code>compairFunction(a, b)</code> returns 0, <code>a</code> and <code>b</code> are unchanged</li>
+				<li>If  <code>compairFunction(a, b)</code> returns greater than 0, <code>b</code> comes first</li>
+			</ul>
+		    </p>
+			<p>The example below uses <code>compairFunction(a, b)</code></p>
+			<h1>Sorting Numbers</h1>
+			<p>We use a <code>compareFunction()</code> to sort numbers in an Array, In the example below items 
+				are sorted in ascending order.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var numbers = [5, 3, 4, 1, 2];
+										
+		numbers.sort(function(a, b){
+		return a - b;
+		});  
+		document.getElementById("demo").innerHTML = numbers;
+		</code></pre>
+	</div>
+				<p>The example below  separates the <code>compareFunction(a, b)</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var numbers = [5, 3, 4, 1, 2];
+										
+		numbers.sort(compareFunction);  
+		function compareFunction(a, b){
+		return a - b;
+		}
+		document.getElementById("demo").innerHTML = numbers;
+												
+		</code></pre>
+	</div>
+				<p>The example below sorts the numbers in <code>descending order</code></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var numbers = [5, 3, 4, 1, 2];
+										
+		numbers.sort(compareFunction);  
+		function compareFunction(a, b){
+		return b - a;
+		}
+		document.getElementById("demo").innerHTML = numbers;
+												
+		</code></pre>
+	</div>
+				<h4>Getting the Highest or lowest Value</h4>
+				<p>To get the <Code class="language-js">highest</Code> value, sorts the numbers in <code>descending order</code> then
+				get the first value.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var numbers = [5, 3, 4, 1, 2];
+										
+		numbers.sort(compareFunction);  
+		function compareFunction(a, b){
+		return b - a;
+		}
+		var highest = numbers[0];
+		document.getElementById("demo").innerHTML = highest;
+												
+		</code></pre>
+	</div>
+				<p>To get the <Code>lowest</Code> value, sorts the numbers in <code>ascending order</code> then
+				get the first value.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		var numbers = [5, 3, 4, 1, 2];
+								
+		numbers.sort(compareFunction);  
+		function compareFunction(a, b){
+		return a - b;
+		}
+		var lowest = numbers[0];
+		document.getElementById("demo").innerHTML = lowest;
+		</code></pre>
+	</div>
+			<h4>Sorting an Array of Objects</h4>
+			<p>We need to compare the object numerical properties to sort an object.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		 let people = [   //create our array of objects
+		 {name: "scott", age: 53},
+		 {name: "sandra", age: 52},
+		 {name: "paul", age: 32}
+		 ];
+
+		 people.sort(function(a, b) {
+		 return a.age - b.age;      //sort in ascending order
+		 });
+
+		 for(var i = 0; i < people.length; i++){  //cycle through array objects
+		 document.getElementById("demo").innerHTML +=  
+		 '&ltp&gtName: ' + people[i].name + '&ltbr&gt age: ' + people[i].age + '&lt/p&gt';
+		 }
+    	</code></pre>
+	</div>
+
+		<h4>Reversing an Array </h4>
+		<p>We use the <code>reverse()</code> method to reverse an Array.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+ 		let days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+ 		days.reverse();
+
+	 	document.getElementById("demo").innerHTML = days;
+		</code></pre>
+	</div>
+		<h1>Array Iteration</h1>
+	 	<p>
+		In this exercise we will learn about Iterating over an array, This means to perform an action on each array element
+		by accessing each elements value one at a time.<br>
+		<h4><code>for()</code> loop</h4>
+		The easiest way to iterate over an element is to use the  <code>for()</code>  loop. We will learn more about loops later.
+		 </p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let car = ["ford", "audi", "saab", "Mazda"];
+        
+		for (let i = 0; i < car.length; i++){
+		document.getElementById("demo").innerHTML = result;
+		}
+		</code></pre>
+	</div>
+		<h4><code>forEach()</code> Method</h4>
+		<p>The <code>forEach()</code> method executes the given function once for each array element, and
+		has only one argument a <strong>callback function</strong>.<br>
+		The callback function will accept one of three arguments:<br>
+	    <ul>
+			<li><code>value</code>- The element being processed.</li>
+			<li><code>index</code>- The index of the current elements.</li>
+			<li><code>array</code>- The array itself.</li>
+		</ul>
+		The index and the array elements can be omitted.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let car = ["ford", "audi", "saab", "Mazda"];
+				
+		car.forEach(function(value, index, array){
+		document.getElementById("demo").innerHTML += '&ltp&gt Index: ' + index + ' &ltbr&gtValue: ' + value + '&lt/br&gt';
+		});
+		</code></pre>
+			</div>
+			<h4><code >map()</code> Method</h4>
+			<p>The <code class="language-js">map()</code> Method creates a new array with each element changed according
+			to the logic provided by the function.<br>
+			The given function will accept one of three arguments:<br>
+			<ul>
+				<li><code>value</code>- The element being processed.</li>
+				<li><code>index</code>- The index of the current elements.</li>
+				<li><code>array</code>- The array itself.</li>
+			</ul></p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let numbers = [10, 20, 30, 40, 50];
+
+		let numbersTwoTimes = numbers.map(function(value) {
+		return value * 2;
+		});
+
+		document.getElementById("demo").innerHTML += numbersTwoTimes;
+		</code></pre>
+	</div>
+		<h4><code >filter()</code> Method</h4>
+		<p>The <code>filter()</code> Method creates a new array with each element that passed the given 
+		test by the provided function.<br>
+		The given function will accept one of three arguments:<br>
+	<ul>
+		<li><code>value</code>- The element being processed.</li>
+		<li><code>index</code>- The index of the current elements.</li>
+		<li><code>array</code>- The array itself.</li>
+	</ul>
+		Only the numbers less than 40 are passed to the new array.</p>
+	<div class="cBox">
+		<pre class="c1"><code class="language-js">
+		let numbers = [10, 20, 30, 40, 50];
+
+		let newArr = numbers.filter(function(value) {
+		return value < 40;
+		});
+
+		document.getElementById("demo").innerHTML += newArr;
+		</code></pre>
+	</div>
+
+</div><!--box 12 ends-->
+</div> <!--ContainerMain end-->	
+ <script src="script.js"></script>  
+ <script src="prism.js"></script> 
+	
+	</body>
+    </html>
